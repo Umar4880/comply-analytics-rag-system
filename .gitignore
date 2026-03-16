@@ -1,0 +1,39 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Project data and vector storage
+app/data/
+data/
+qdrant_fs_storage/
+
+# Database files and folders
+database-files/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Tooling caches
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+
+.next/
+dist/   
+build/
+node_modules/
+
+.env

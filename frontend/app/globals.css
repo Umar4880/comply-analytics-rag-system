@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-xl bg-white/[0.08] border border-white/[0.12];
+  }
+  .glass-hover {
+    @apply hover:bg-white/[0.12] transition-all duration-200;
+  }
+  .glass-strong {
+    @apply backdrop-blur-2xl bg-white/[0.12] border border-white/[0.20];
+  }
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 650px at 80% -10%, rgba(99, 102, 241, 0.20), transparent),
+    radial-gradient(900px 500px at -10% 110%, rgba(14, 165, 233, 0.16), transparent),
+    linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e1b4b 100%);
+}
