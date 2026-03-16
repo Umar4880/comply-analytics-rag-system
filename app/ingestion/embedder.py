@@ -10,6 +10,7 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
 
 from app.ingestion.chunker import ChunkDocument, EmbedReady
+from app.update_doc_syc.syncher import SyncDocument
 
 
 class EmbedDocument:
@@ -21,6 +22,7 @@ class EmbedDocument:
         self._state_file = self._cache_dir / "ingestion_state.json"
         self._collection_name = "documents"
         self._qdrant = QdrantClient(host="localhost", port=6333)
+        self._syncher = SyncDocument()
         self._state = self._load_state()
         self._collection_ready = False
 
@@ -50,9 +52,8 @@ class EmbedDocument:
         with open(self._state_file, "w", encoding="utf-8") as f:
             json.dump(self._state, f, ensure_ascii=False, indent=2)
 
-    def _get_file_fingerprint(self, file_path: str) -> str:
-        stat = Path(file_path).stat()
-        return f"{stat.st_size}:{stat.st_mtime_ns}"
+    def _get_file_hash(self, file_path: str) -> str:
+        return self._syncher.generate_file_hash(file_path)
 
     def _get_cache_file_path(self, file_path: str) -> Path:
         source = str(Path(file_path).resolve())
@@ -99,11 +100,13 @@ class EmbedDocument:
         cache_path = self._get_cache_file_path(file_path)
         self._write_chunk_cache(cache_path, chunks)
 
+        chunk_ids = [item.chunk_id for item in chunks]
         state_item = {
-            "fingerprint": self._get_file_fingerprint(file_path),
+            "file_hash": self._get_file_hash(file_path),
             "status": "parsed_pending_embed",
             "cache_path": str(cache_path),
             "embedded_chunk_ids": [],
+            "chunk_ids": chunk_ids,
             "last_error": None,
             "updated_at": self._utc_now(),
         }
@@ -112,6 +115,20 @@ class EmbedDocument:
         self._save_state()
 
         return chunks, state_item
+
+    def _delete_chunks_from_qdrant(self, chunk_ids: set[str]) -> None:
+        if not chunk_ids:
+            return
+
+        point_ids = [str(uuid5(NAMESPACE_URL, cid)) for cid in chunk_ids]
+        try:
+            self._qdrant.delete(
+                collection_name=self._collection_name,
+                points_selector=point_ids,
+            )
+        except Exception:
+            # Keep ingestion resilient; stale vectors can be cleaned by a full reindex.
+            pass
 
     # ── Embed and upsert one EmbedReady item ──────────────────────────────────
 
@@ -152,9 +169,13 @@ class EmbedDocument:
         file_path: str,
         chunks: list[EmbedReady],
         state_item: dict,
+        force_pending_chunk_ids: set[str] | None = None,
     ) -> None:
         embedded_ids = set(state_item.get("embedded_chunk_ids", []))
-        pending = [item for item in chunks if item.chunk_id not in embedded_ids]
+        if force_pending_chunk_ids is None:
+            pending = [item for item in chunks if item.chunk_id not in embedded_ids]
+        else:
+            pending = [item for item in chunks if item.chunk_id in force_pending_chunk_ids]
 
         print(
             f"  → Embedding {len(pending)} pending chunks "
@@ -174,6 +195,7 @@ class EmbedDocument:
                 self._save_state()
 
         state_item["embedded_chunk_ids"] = list(embedded_ids)
+        state_item["chunk_ids"] = [item.chunk_id for item in chunks]
         state_item["status"] = "completed"
         state_item["last_error"] = None
         state_item["updated_at"] = self._utc_now()
@@ -182,7 +204,7 @@ class EmbedDocument:
 
     # ── Main entry point ──────────────────────────────────────────────────────
 
-    def embed(self) -> None:
+    def embed(self) -> dict:
         """
         Reads all supported files from app/data,
         stages parsed chunks to cache, and embeds with resume support.
@@ -212,10 +234,11 @@ class EmbedDocument:
                 self._state["files"][file_path] = item
                 self._save_state()
 
-                fingerprint = self._get_file_fingerprint(file_path)
+                file_hash = self._get_file_hash(file_path)
                 state_item = self._state["files"].get(file_path)
+                previous_state = dict(state_item) if state_item else None
 
-                if state_item and state_item.get("fingerprint") == fingerprint:
+                if state_item and state_item.get("file_hash") == file_hash:
                     cache_path = Path(state_item.get("cache_path", ""))
 
                     if state_item.get("status") == "completed" and cache_path.exists():
@@ -232,7 +255,34 @@ class EmbedDocument:
                 else:
                     chunks, state_item = self._parse_and_stage(file_path)
 
-                self._embed_staged_chunks(file_path, chunks, state_item)
+                if previous_state and previous_state.get("file_hash") and previous_state.get("file_hash") != file_hash:
+                    old_ids = set(previous_state.get("embedded_chunk_ids", []))
+                    new_ids = {item.chunk_id for item in chunks}
+                    diff = self._syncher.diff_chunk_ids(old_ids, new_ids)
+
+                    if diff["removed"]:
+                        self._delete_chunks_from_qdrant(diff["removed"])
+
+                    print(
+                        "  → Update diff: "
+                        f"unchanged={len(diff['unchanged'])}, "
+                        f"added={len(diff['added'])}, "
+                        f"removed={len(diff['removed'])}"
+                    )
+
+                    state_item["embedded_chunk_ids"] = list(diff["unchanged"])
+                    state_item["chunk_ids"] = [item.chunk_id for item in chunks]
+                    self._state["files"][file_path] = state_item
+                    self._save_state()
+
+                    self._embed_staged_chunks(
+                        file_path=file_path,
+                        chunks=chunks,
+                        state_item=state_item,
+                        force_pending_chunk_ids=diff["added"],
+                    )
+                else:
+                    self._embed_staged_chunks(file_path, chunks, state_item)
                 print("  → Completed")
                 completed += 1
 
@@ -264,6 +314,13 @@ class EmbedDocument:
         print(f"  → Pending files   : {pending}")
         print(f"  → Failed files    : {failed}")
         print(f"  → State file      : {self._state_file}")
+
+        return {
+            "completed_files": completed,
+            "pending_files": pending,
+            "failed_files": failed,
+            "state_file": str(self._state_file),
+        }
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────

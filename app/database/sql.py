@@ -57,6 +57,19 @@ class Database:
                     updated_at    TEXT NOT NULL
                 );
 
+                CREATE TABLE IF NOT EXISTS structured_chunks (
+                    chunk_id    TEXT PRIMARY KEY,
+                    doc_id      TEXT NOT NULL REFERENCES document_metadata(doc_id) ON DELETE CASCADE,
+                    doc_name    TEXT NOT NULL,
+                    heading_h1  TEXT,
+                    heading_h2  TEXT,
+                    heading_h3  TEXT,
+                    content     TEXT NOT NULL,
+                    page_start  INTEGER NOT NULL,
+                    page_end    INTEGER NOT NULL,
+                    updated_at  TEXT NOT NULL
+                );
+
                 CREATE TABLE IF NOT EXISTS chat_sessions (
                     session_id  TEXT PRIMARY KEY,
                     user_id     TEXT NOT NULL,
@@ -80,6 +93,15 @@ class Database:
 
                 CREATE INDEX IF NOT EXISTS idx_messages_session
                     ON chat_messages(session_id);
+
+                CREATE INDEX IF NOT EXISTS idx_structured_h1
+                    ON structured_chunks(doc_id, heading_h1);
+
+                CREATE INDEX IF NOT EXISTS idx_structured_h2
+                    ON structured_chunks(doc_id, heading_h2);
+
+                CREATE INDEX IF NOT EXISTS idx_structured_h3
+                    ON structured_chunks(doc_id, heading_h3);
 
             """)
 
@@ -172,6 +194,79 @@ class Database:
                 "DELETE FROM chunk_metadata WHERE chunk_id = ?",
                 (chunk_id,)
             )
+
+    def delete_chunk_metadata_by_doc(self, doc_id: str):
+        with self._connect_db() as conn:
+            conn.execute(
+                "DELETE FROM chunk_metadata WHERE doc_id = ?",
+                (doc_id,)
+            )
+
+    def upsert_structured_chunk(
+        self,
+        chunk_id: str,
+        doc_id: str,
+        doc_name: str,
+        heading_h1: str,
+        heading_h2: str,
+        heading_h3: str,
+        content: str,
+        page_start: int,
+        page_end: int,
+    ):
+        now = datetime.now(timezone.utc).isoformat()
+        with self._connect_db() as conn:
+            conn.execute(
+                """
+                INSERT INTO structured_chunks
+                    (chunk_id, doc_id, doc_name, heading_h1, heading_h2, heading_h3,
+                     content, page_start, page_end, updated_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(chunk_id) DO UPDATE SET
+                    heading_h1 = excluded.heading_h1,
+                    heading_h2 = excluded.heading_h2,
+                    heading_h3 = excluded.heading_h3,
+                    content = excluded.content,
+                    page_start = excluded.page_start,
+                    page_end = excluded.page_end,
+                    updated_at = excluded.updated_at
+                """,
+                (
+                    chunk_id,
+                    doc_id,
+                    doc_name,
+                    heading_h1,
+                    heading_h2,
+                    heading_h3,
+                    content,
+                    page_start,
+                    page_end,
+                    now,
+                ),
+            )
+
+    def delete_structured_chunks_by_doc(self, doc_id: str):
+        with self._connect_db() as conn:
+            conn.execute("DELETE FROM structured_chunks WHERE doc_id = ?", (doc_id,))
+
+    def find_parent_chunk(self, doc_id: str, heading_field: str, heading_value: str):
+        allowed = {"heading_h1", "heading_h2", "heading_h3"}
+        if heading_field not in allowed:
+            return None
+        if not heading_value:
+            return None
+
+        with self._connect_db() as conn:
+            row = conn.execute(
+                f"""
+                SELECT content, heading_h1, heading_h2, heading_h3, page_start, page_end
+                FROM structured_chunks
+                WHERE doc_id = ? AND {heading_field} = ?
+                LIMIT 1
+                """,
+                (doc_id, heading_value),
+            ).fetchone()
+            return dict(row) if row else None
 
     #============================================================
     # CHAT SESSION OPERATIONS

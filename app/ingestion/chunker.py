@@ -149,12 +149,27 @@ class ChunkDocument:
             self._file_path, total_pages
         )
 
+        # Keep chunk metadata in sync for updated files.
+        self._db.delete_chunk_metadata_by_doc(doc_id)
+        self._db.delete_structured_chunks_by_doc(doc_id)
+
         # structured chunk records
         for chunk in result.structured_chunks:
             chunk_id = self._syncher.generate_chunk_id(doc_id, chunk.content)
             self._db.upsert_chunk_metadata(
                 chunk_id, doc_id, 'structured',
                 chunk.page_start, chunk.page_end
+            )
+            self._db.upsert_structured_chunk(
+                chunk_id=chunk_id,
+                doc_id=doc_id,
+                doc_name=doc_name,
+                heading_h1=chunk.heading_h1,
+                heading_h2=chunk.heading_h2,
+                heading_h3=chunk.heading_h3,
+                content=chunk.content,
+                page_start=chunk.page_start,
+                page_end=chunk.page_end,
             )
 
         # unstructured chunk records

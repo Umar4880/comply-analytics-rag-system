@@ -9,9 +9,19 @@ type Props = {
   activeSessionId: string | null;
   onSelectSession: (id: string) => void;
   onNewChat: () => void;
+  onUpdateKnowledgeBase: () => void;
+  isUpdatingKnowledgeBase?: boolean;
 };
 
-export default function Sidebar({ sessions, documents, activeSessionId, onSelectSession, onNewChat }: Props) {
+export default function Sidebar({
+  sessions,
+  documents,
+  activeSessionId,
+  onSelectSession,
+  onNewChat,
+  onUpdateKnowledgeBase,
+  isUpdatingKnowledgeBase,
+}: Props) {
   return (
     <motion.aside
       initial={{ x: -20, opacity: 0 }}
@@ -52,6 +62,15 @@ export default function Sidebar({ sessions, documents, activeSessionId, onSelect
           </div>
         ))}
       </div>
+
+      <h3 className="text-xs tracking-[0.18em] uppercase text-white/50 mt-6 mb-2">Settings</h3>
+      <button
+        onClick={onUpdateKnowledgeBase}
+        disabled={!!isUpdatingKnowledgeBase}
+        className="w-full rounded-xl border border-cyan-300/40 bg-slate-800 hover:bg-slate-700 text-cyan-100 py-2.5 font-medium transition-all disabled:opacity-60"
+      >
+        {isUpdatingKnowledgeBase ? "Updating Knowledge Base..." : "Update Knowledge Base"}
+      </button>
     </motion.aside>
   );
 }

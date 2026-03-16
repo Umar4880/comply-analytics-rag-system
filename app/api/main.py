@@ -215,6 +215,16 @@ def upload_document(file: UploadFile = File(...)):
     }
 
 
+@app.post("/api/documents/sync")
+def sync_documents():
+    try:
+        embedder = EmbedDocument()
+        summary = embedder.embed()
+        return {"ok": True, "summary": summary}
+    except Exception as e:
+        return err("Failed to sync knowledge base", "DOCUMENT_SYNC_FAILED", str(e), 500)
+
+
 @app.delete("/api/documents/{doc_id}")
 def delete_document(doc_id: str):
     db_path = get_db_path()

@@ -54,6 +54,15 @@ export async function deleteDocument(docId: string): Promise<void> {
   if (!res.ok) throw new Error("Delete document failed");
 }
 
+export async function syncKnowledgeBase(): Promise<{ ok: boolean; summary?: unknown }> {
+  const res = await fetch(`${API_URL}/api/documents/sync`, { method: "POST" });
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(text || "Knowledge base sync failed");
+  }
+  return res.json();
+}
+
 export function chatStream(request: {
   query: string;
   session_id: string | null;

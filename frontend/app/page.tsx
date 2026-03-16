@@ -9,13 +9,14 @@ import CitationModal from "../components/CitationModal";
 import { useDocuments } from "../hooks/useDocuments";
 import { useStream } from "../hooks/useStream";
 import { useChatStore } from "../store/chatStore";
-import { fetchSessions, fetchSessionMessages } from "../lib/api";
+import { fetchSessions, fetchSessionMessages, syncKnowledgeBase } from "../lib/api";
 
 const USER_ID = "local-user";
 
 export default function HomePage() {
   const [citation, setCitation] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isSyncingKnowledgeBase, setIsSyncingKnowledgeBase] = useState(false);
 
   const sessions = useChatStore((s) => s.sessions);
   const activeSessionId = useChatStore((s) => s.activeSessionId);
@@ -72,6 +73,21 @@ export default function HomePage() {
     }
   };
 
+  const onUpdateKnowledgeBase = async () => {
+    setError(null);
+    setIsSyncingKnowledgeBase(true);
+    try {
+      await syncKnowledgeBase();
+      await documentsQuery.refetch();
+      fetchSessions(USER_ID).then(setSessions).catch(() => undefined);
+    } catch (e) {
+      const message = e instanceof Error ? e.message : "Knowledge base update failed";
+      setError(message);
+    } finally {
+      setIsSyncingKnowledgeBase(false);
+    }
+  };
+
   return (
     <main className="flex min-h-screen bg-[radial-gradient(1200px_600px_at_70%_-10%,rgba(99,102,241,0.18),transparent),radial-gradient(900px_500px_at_10%_100%,rgba(14,165,233,0.12),transparent)]">
       <Sidebar
@@ -79,6 +95,8 @@ export default function HomePage() {
         documents={documents}
         activeSessionId={activeSessionId}
         onSelectSession={setActiveSession}
+        onUpdateKnowledgeBase={onUpdateKnowledgeBase}
+        isUpdatingKnowledgeBase={isSyncingKnowledgeBase}
         onNewChat={() => {
           const sid = createSession();
           setActiveSession(sid);
