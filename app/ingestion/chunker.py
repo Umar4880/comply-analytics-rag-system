@@ -8,6 +8,10 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from dotenv import load_dotenv
 from typing import Any 
 
+from langchain_ollama import ChatOllama
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+
 from app.ingestion.parser import DocumentParser
 from app.database.sql import Database
 from app.update_doc_syc.syncher import SyncDocument
@@ -68,6 +72,11 @@ class ChunkDocument:
 
     def _get_parsed_document(self) -> ParsedDocument:
         parser = DocumentParser(file_path=self._file_path)
+        source_path = Path(self._file_path).resolve()
+
+        # Batch parsing is PDF-only because pypdf cannot read DOCX/TXT.
+        if source_path.suffix.lower() != ".pdf":
+            return parser.parse()
 
         # Parse large PDFs in page batches to reduce peak memory pressure.
         batch_size = int(os.getenv("PARSER_PAGE_BATCH", "10"))
@@ -80,7 +89,6 @@ class ChunkDocument:
             # Fallback to single-pass parse if pypdf is unavailable.
             return parser.parse()
 
-        source_path = Path(self._file_path).resolve()
         reader = PdfReader(str(source_path))
         total_pages = len(reader.pages)
 
@@ -202,6 +210,7 @@ class ChunkDocument:
 
     # ── Step 4a: Build EmbedReady for structured chunk ────────────────────────
 
+
     def _build_structured(
         self,
         content:     str,
@@ -233,7 +242,7 @@ class ChunkDocument:
                 "page_start":  page_start,
                 "page_end":    page_end,
                 "total_pages": total_pages,
-                "content":     content,        # raw content — sent to LLM
+                "content":     content,
             }
         )
 
@@ -259,13 +268,48 @@ class ChunkDocument:
 
         if token_count < MIN_TOKENS:
             return None    # empty or noise table — discard
+        
+        model = ChatOllama(
+            model="llama3.2:latest",
+            temperature=0.7
+        )
+
+        output_parser = StrOutputParser()
+
+        PROMPT = """
+        You are an ai assistant that strictly tasked with generating concise, contextual summary from given text and table. This summary should capture key information from both text and table, making it usefull for retrieving the table later based on user quries.
+
+        Input:
+        1. Text (Structured_chunk): {structured_chunk}
+        2. Table (Unstructured_chunk): {unstructured_chunk}
+
+        Output:
+        -  Only summary paragraph capturing key info from both table and text.
+
+        Guidelines:
+            - Focus on facts and data points given in both text and table.
+            - Make the summary query friendly with all necessary keywords (helpfull for retrieval).
+            - Keep it under 4-5 sentence.
+            - There should be no supporting lines (e.g. Here is a concise summary of the key information from both the text and table:), just summary paragraph.
+        """
+
+        template = PromptTemplate(
+            input_variables=['structured_chunks', 'unstructured_chunks'],
+            template=PROMPT
+        )
+
+        chain = template | model | output_parser
+
+        result = chain.invoke({"structured_chunk": chunk.context, "unstructured_chunk":chunk.markdown_content})
+
+        # print("\n\n---summary---\n\n",result)
 
         chunk_id = self._syncher.generate_chunk_id(
             doc_id, chunk.markdown_content
         )
 
         return EmbedReady(
-            embed_content=f"search_document: {chunk.markdown_content}",
+            embed_content=f"search_document: {result} \n {chunk.markdown_content}",
             chunk_id=chunk_id,
             doc_id=doc_id,
             payload={
@@ -279,7 +323,7 @@ class ChunkDocument:
                 "page_start":  chunk.page_start,
                 "page_end":    chunk.page_end,
                 "total_pages": total_pages,
-                "content":     chunk.markdown_content,
+                "content": f"{result}  \n\n {chunk.markdown_content}"
             }
         )
 
@@ -347,8 +391,8 @@ class ChunkDocument:
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    chunker = ChunkDocument("app/data/Comply M Sheet_Hungary.pdf")
-    chunks  = chunker.chunk()
+    chunker = ChunkDocument("app/data/Does+Comply+support+electronic+filing_ (2).docx")
+    chunks  = chunker.chunk("app/data/Does+Comply+support+electronic+filing_ (2).docx")
 
     with open('chunk.txt', 'w', encoding="utf-8") as f:
         for idx, c in enumerate(chunks):
@@ -358,8 +402,8 @@ if __name__ == "__main__":
             f.write(f"H1    : {c.payload['heading_h1']}\n")
             f.write(f"H2    : {c.payload['heading_h2']}\n")
             f.write(f"H3    : {c.payload['heading_h3']}\n")
-            f.write(f"pages : {c.payload['page_start']}–"
-                    f"{c.payload['page_end']}\n\n")
-            f.write(f"{c.embed_content}\n\n")
+            f.write(f"pages : {c.payload['page_start']}–" f"{c.payload['page_end']}\n\n")
+            f.write(f"content: {c.payload['content']}")
+            
 
     print("Output written to chunk.txt")

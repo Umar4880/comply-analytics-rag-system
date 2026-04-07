@@ -30,6 +30,7 @@ class InputGuardrails:
         "comply",
         "policy",
         "invoice",
+        "hello"
     ]
 
     def validate(self, query: str) -> GuardrailResult:

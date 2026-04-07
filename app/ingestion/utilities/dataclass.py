@@ -31,6 +31,7 @@ class UnstructuredChunk:
     heading_h3: str
     page_start: int
     page_end: int
+    context: str
 
 @dataclass
 class ParsedDocument:

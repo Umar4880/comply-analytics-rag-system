@@ -5,6 +5,7 @@ import { useChatStore } from "../store/chatStore";
 
 export function useStream() {
   const appendStreamToken = useChatStore((s) => s.appendStreamToken);
+  const setStreamingStatus = useChatStore((s) => s.setStreamingStatus);
   const finalizeStream = useChatStore((s) => s.finalizeStream);
   const cancelStreaming = useChatStore((s) => s.cancelStreaming);
 
@@ -52,10 +53,20 @@ export function useStream() {
         if (!raw.trim()) continue;
 
         const data = JSON.parse(raw);
-        if (data.type === "token") {
+        if (data.type === "status") {
+          // Show status update briefly (will be replaced when tokens start)
+          setStreamingStatus(data.status);
+        } else if (data.type === "token") {
           appendStreamToken(data.token || "");
         } else if (data.type === "final") {
-          finalizeStream(data.cited_chunks || [], data.confidence || 0, data.session_id);
+          finalizeStream(
+            data.cited_chunks || [],
+            data.citation_details || [],
+            data.confidence || 0,
+            data.session_id,
+            data.model_used,
+            data.session_title
+          );
         } else if (data.type === "error") {
           cancelStreaming();
           const message = data.detail ? `${data.error || "Stream error"}: ${data.detail}` : (data.error || "Stream error");

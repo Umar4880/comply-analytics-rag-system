@@ -13,16 +13,16 @@ class ConversationMemory:
     def __init__(self) -> None:
         self._db_path = os.getenv("DATABASE_PATH", str(DEFAULT_DB_PATH))
 
-    def load_history(self, session_id: str, exchanges: int = 10) -> list[dict[str, Any]]:
-        if not session_id or not os.path.exists(self._db_path):
+    def load_history(self, thread_id: str, exchanges: int = 10) -> list[dict[str, Any]]:
+        if not thread_id or not os.path.exists(self._db_path):
             return []
 
         conn = sqlite3.connect(self._db_path)
         conn.row_factory = sqlite3.Row
         try:
             rows = conn.execute(
-                "SELECT role, content FROM chat_messages WHERE session_id = ? ORDER BY created_at DESC LIMIT ?",
-                (session_id, exchanges * 2),
+                "SELECT role, content FROM chat_messages WHERE thread_id = ? ORDER BY created_at DESC LIMIT ?",
+                (thread_id, exchanges * 2),
             ).fetchall()
         except Exception:
             rows = []

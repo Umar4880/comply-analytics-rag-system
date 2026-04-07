@@ -9,8 +9,20 @@ export type Message = {
   role: "user" | "assistant";
   content: string;
   cited_chunks: string[];
+  citation_details?: CitationDetail[];
   created_at?: string;
   confidence?: number;
+  model_used?: string;
+};
+
+export type CitationDetail = {
+  chunk_id: string;
+  doc_name: string;
+  section: string;
+  page_start: number;
+  page_end: number;
+  label: string;
+  display: string;
 };
 
 export type DocumentItem = {
@@ -24,8 +36,11 @@ export type DocumentItem = {
 
 export type ChatFinalEvent = {
   cited_chunks: string[];
+  citation_details?: CitationDetail[];
   session_id: string;
+  session_title?: string;
   confidence: number;
+  model_used?: string;
   from_cache: boolean;
 };
 

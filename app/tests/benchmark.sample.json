@@ -1,0 +1,308 @@
+[
+    {
+    "id": "comply_control_lists_01",
+    "question": "In Comply Control Lists.pdf, what is Purpose of this document The purpose of this document?",
+    "reference_answer": "Purpose of this document The purpose of this document is to provide guidance, context, and instruction for users required to file Control Lists as part of their VAT Returns.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists.pdf"
+  },
+  {
+    "id": "comply_control_lists_02",
+    "question": "According to Comply Control Lists.pdf, what does it state about 'Note: Frequency Validation If during onboarding, the user selects a'?",
+    "reference_answer": "Note: Frequency Validation If during onboarding, the user selects a different frequency to that configured in the excel file for the VAT Return, then an Error will be displayed and the Frequency for the Control List will be automatically set to the same as the VAT Return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists.pdf"
+  },
+  {
+    "id": "comply_control_lists_03",
+    "question": "In Comply Control Lists.pdf, what is Comply: Control Lists 9 After the Data File?",
+    "reference_answer": "Comply: Control Lists 9 After the Data File is deleted Once the Data File is deleted from the VAT Return, a few things happen.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists.pdf"
+  },
+  {
+    "id": "comply_control_lists_04",
+    "question": "According to Comply Control Lists.pdf, what does it state about 'Please Note: The user can send a Control List back'?",
+    "reference_answer": "Please Note: The user can send a Control List back to To Prepare also without impacting the associated VAT Return Comply: Control Lists 16 3.5.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists.pdf"
+  },
+  {
+    "id": "comply_control_lists_05",
+    "question": "In Comply Control Lists.pdf, what is Upload Files It?",
+    "reference_answer": "Upload Files It is important to note that adding/editing transactional data should be completed on the corresponding VAT Return (the changes made on the VAT Return will be automatically reflected in the Control List).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_01",
+    "question": "In Comply M Sheet_Hungary.pdf, what is 17 Comply: M Sheet (Hungary) 3 Purpose of this document The purpose of this document?",
+    "reference_answer": "17 Comply: M Sheet (Hungary) 3 Purpose of this document The purpose of this document is to provide guidance, context, and instruction to users preparing M Sheets for Hungary as part of the VAT Return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_02",
+    "question": "In Comply M Sheet_Hungary.pdf, what are Edit Numerical Boxes Users who?",
+    "reference_answer": "Edit Numerical Boxes Users who are preparing a VAT Return for Hungary can, where required, amend/edit the List Purchases box.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_03",
+    "question": "In Comply M Sheet_Hungary.pdf, what are Navigate to: Return > Return Review > Numerical Boxes The new boxes?",
+    "reference_answer": "Navigate to: Return > Return Review > Numerical Boxes The new boxes are generated at the bottom of the Numerical Boxes list, so the user will be required to scroll to locate them.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_04",
+    "question": "In Comply M Sheet_Hungary.pdf, what is Notes: • If the “Date of Receipt”?",
+    "reference_answer": "Notes: • If the “Date of Receipt” is mapped in the Template for VAT Returns, and is included in the uploaded data file, then this will be displayed in the List Purchases Credit Notes box (as shown above).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_05",
+    "question": "According to Comply M Sheet_Hungary.pdf, what does it state about 'Example: Edit Supplier VAT Number The user can elect to'?",
+    "reference_answer": "Example: Edit Supplier VAT Number The user can elect to change the Supplier VAT number for either one row, multiple rows or Apply to All rows.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_how_to_upload_files_01",
+    "question": "According to Comply_ How to Upload Files.pdf, what does it state about 'This will include: • Uploading Data Files for Return (For'?",
+    "reference_answer": "This will include: • Uploading Data Files for Return (For clients not using API for uploads) • Files uploaded (For Clients using API for Uploads) • Uploading Supporting Documents Comply: Returns Processing 4 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_ How to Upload Files.pdf"
+  },
+  {
+    "id": "comply_how_to_upload_files_02",
+    "question": "In Comply_ How to Upload Files.pdf, what is Upload a Data File for Return (API Users) For clients using APIs for data upload, it?",
+    "reference_answer": "Upload a Data File for Return (API Users) For clients using APIs for data upload, it is key that during onboarding the Data Provider role is assigned to System Bot (as opposed to a physical user).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_ How to Upload Files.pdf"
+  },
+  {
+    "id": "comply_how_to_upload_files_03",
+    "question": "In Comply_ How to Upload Files.pdf, what is 11 Comply: Returns Processing 3 Overview Purpose of this document The purpose of this document?",
+    "reference_answer": "11 Comply: Returns Processing 3 Overview Purpose of this document The purpose of this document is to provide guidance, context, and instruction on the processes for Uploading files to Comply.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_ How to Upload Files.pdf"
+  },
+  {
+    "id": "comply_how_to_upload_files_04",
+    "question": "In Comply_ How to Upload Files.pdf, what is Comply: Returns Processing 8 Based on the assigned due date for the Data Preparation step, a notification?",
+    "reference_answer": "Comply: Returns Processing 8 Based on the assigned due date for the Data Preparation step, a notification is sent to the Data Preparer (providing they have configured their notifications settings), and the Return will now be visible for them in their Returns section once they login.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_ How to Upload Files.pdf"
+  },
+  {
+    "id": "comply_how_to_upload_files_05",
+    "question": "According to Comply_ How to Upload Files.pdf, what does it state about 'Data Due Return Status Displayed Prior to first transaction pushed'?",
+    "reference_answer": "Data Due Return Status Displayed Prior to first transaction pushed via API Data Due After first transaction pushed via API To Prepare Comply: Returns Processing 10 2.1.1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_ How to Upload Files.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_01",
+    "question": "In Comply_Configuring Intrastat Reurns.pdf, what is 45 Comply: Configuring Comply for Intrastat Returns 3 Purpose of this document The purpose of this document?",
+    "reference_answer": "45 Comply: Configuring Comply for Intrastat Returns 3 Purpose of this document The purpose of this document is to provide guidance, context, and instruction on the steps required to configure comply for a Company to file Intrastat Returns.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_02",
+    "question": "In Comply_Configuring Intrastat Reurns.pdf, what is There are 2 Types of Intrastat Return: • Intrastat Arrivals – This?",
+    "reference_answer": "There are 2 Types of Intrastat Return: • Intrastat Arrivals – This is the fileable return on Purchases.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_03",
+    "question": "According to Comply_Configuring Intrastat Reurns.pdf, what does it state about 'Sample Template for Finland: Please note: Depending on the Entities'?",
+    "reference_answer": "Sample Template for Finland: Please note: Depending on the Entities and their requirements, you may be required to create multiple Templates: • VAT Returns • Intrastat Arrivals Simplified • Intrastat Arrivals Detailed • Intrastat Dispatches Simplified • Intrastat Dispatched Detailed Comply: Configuring Comply for Intrastat Returns 8 2.2.2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_04",
+    "question": "In Comply_Configuring Intrastat Reurns.pdf, what are If a company exceeds any of these thresholds, then they?",
+    "reference_answer": "If a company exceeds any of these thresholds, then they are required to file a more detailed Intrastat Return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_05",
+    "question": "According to Comply_Configuring Intrastat Reurns.pdf, what does it state about 'Please note, you may be required to file varying types'?",
+    "reference_answer": "Please note, you may be required to file varying types and subtypes of Intrastat Returns.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
+    "id": "comply_configuring_user_details_01",
+    "question": "In Comply_Configuring User Details.pdf, what are Configure User Notifications Notifications?",
+    "reference_answer": "Configure User Notifications Notifications are a key part of the process for each user role.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Details.pdf"
+  },
+  {
+    "id": "comply_configuring_user_details_02",
+    "question": "In Comply_Configuring User Details.pdf, what is Viewing Email Notifications Example 1: Once a return?",
+    "reference_answer": "Viewing Email Notifications Example 1: Once a return is due, the Data Provider will receive a notification identifying that the data file is due to be uploaded and will display a status of Data Due.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Details.pdf"
+  },
+  {
+    "id": "comply_configuring_user_details_03",
+    "question": "According to Comply_Configuring User Details.pdf, what does it state about 'Example 2: Once a data provider uploads the data file'?",
+    "reference_answer": "Example 2: Once a data provider uploads the data file, the preparer receives a notification to say they have a return assigned to them, which has a task due.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Details.pdf"
+  },
+  {
+    "id": "comply_configuring_user_details_04",
+    "question": "In Comply_Configuring User Details.pdf, what is Below as a sample of an email reminder: Comply: Configuring User Details 16 Note: If the user?",
+    "reference_answer": "Below as a sample of an email reminder: Comply: Configuring User Details 16 Note: If the user is responsible for multiple roles and multiple returns, the reminder may be combined and grouped appropriately in the email.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Details.pdf"
+  },
+  {
+    "id": "comply_configuring_user_details_05",
+    "question": "According to Comply_Configuring User Details.pdf, what does it state about 'Report Role The Report Role section displays the role(s) the'?",
+    "reference_answer": "Report Role The Report Role section displays the role(s) the user has been assigned to perform during the Return processing cycle.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Details.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_01",
+    "question": "According to Comply_Configuring User Roles.pdf, what does it state about 'Note 2 – The Reviewer and Approver roles can be'?",
+    "reference_answer": "Note 2 – The Reviewer and Approver roles can be assigned to the system user which will automatically approve the return for that stage in the process.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_02",
+    "question": "According to Comply_Configuring User Roles.pdf, what does it state about 'In either case, these roles must be assigned to one'?",
+    "reference_answer": "In either case, these roles must be assigned to one of the following groups: • Client Staff • Taxback International (TBI) Staff • System Bot (for use when using API’s for Data Upload) Comply: Configuring User Roles 5 Note 1: A Company could potentially consist of multiple jurisdictions.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_03",
+    "question": "According to Comply_Configuring User Roles.pdf, what does it state about 'If so, roles/users should be assigned to tasks for each'?",
+    "reference_answer": "If so, roles/users should be assigned to tasks for each jurisdiction as required.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_04",
+    "question": "According to Comply_Configuring User Roles.pdf, what does it state about 'Configuring User Roles Comply: Configuring User Roles 1 Version Control'?",
+    "reference_answer": "Configuring User Roles Comply: Configuring User Roles 1 Version Control Version Date Author Details 1.0 22nd Nov 2022 Keith O’Sullivan Published Comply: Configuring User Roles 2 Table of Contents 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_05",
+    "question": "In Comply_Configuring User Roles.pdf, what are Overview There?",
+    "reference_answer": "Overview There are 5 Mandatory roles in Comply: • Data Provider – person responsible for providing the data for the return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_control_list_est_01",
+    "question": "In Comply_Control List_EST.pdf, what is 14 Comply: Control List (Estonia) 3 Purpose of this document The purpose of this document?",
+    "reference_answer": "14 Comply: Control List (Estonia) 3 Purpose of this document The purpose of this document is to provide guidance, context, and instruction to users preparing Control Lists for Estonia as part of the VAT Return 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Control List_EST.pdf"
+  },
+  {
+    "id": "comply_control_list_est_02",
+    "question": "In Comply_Control List_EST.pdf, what are Navigate to: Return > Return Review > Numerical Boxes The new boxes?",
+    "reference_answer": "Navigate to: Return > Return Review > Numerical Boxes The new boxes are generated at the bottom of the Numerical Boxes list, so the user will be required to scroll to locate them.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Control List_EST.pdf"
+  },
+  {
+    "id": "comply_control_list_est_03",
+    "question": "In Comply_Control List_EST.pdf, what are Edit Numerical Boxes The following 2 numerical boxes?",
+    "reference_answer": "Edit Numerical Boxes The following 2 numerical boxes are available: • List Sales • List Purchases For users who are preparing a VAT Return for Estonia and need to amend/edit the List Sales/List Purchases numerical boxes After clicking the Eye icon, this opens the Declaration Details screen for either List Sales or List Purchases.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Control List_EST.pdf"
+  },
+  {
+    "id": "comply_control_list_est_04",
+    "question": "According to Comply_Control List_EST.pdf, what does it state about 'These drop-downs consist of different values for both List Sales'?",
+    "reference_answer": "These drop-downs consist of different values for both List Sales and List Purchases: List Sales: • Blank • 01 • 02 • 03 To locate this column, the user may be required to scroll across.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Control List_EST.pdf"
+  }
+]

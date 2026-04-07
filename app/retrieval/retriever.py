@@ -104,23 +104,28 @@ class HybridRetriever:
         # qdrant-client API changed across versions:
         # older clients expose `.search`, newer ones expose `.query_points`.
         points = None
-        if hasattr(self._qdrant, "search"):
-            points = self._qdrant.search(
-                collection_name=self._collection,
-                query_vector=query_vec,
-                query_filter=q_filter,
-                limit=top_k,
-                with_payload=True,
-            )
-        else:
-            response = self._qdrant.query_points(
-                collection_name=self._collection,
-                query=query_vec,
-                query_filter=q_filter,
-                limit=top_k,
-                with_payload=True,
-            )
-            points = getattr(response, "points", response)
+        try:
+            if hasattr(self._qdrant, "search"):
+                points = self._qdrant.search(
+                    collection_name=self._collection,
+                    query_vector=query_vec,
+                    query_filter=q_filter,
+                    limit=top_k,
+                    with_payload=True,
+                )
+            else:
+                response = self._qdrant.query_points(
+                    collection_name=self._collection,
+                    query=query_vec,
+                    query_filter=q_filter,
+                    limit=top_k,
+                    with_payload=True,
+                )
+                points = getattr(response, "points", response)
+        except Exception:
+            # Qdrant can sporadically return internal errors (e.g. OutputTooSmall).
+            # Degrade gracefully to sparse retrieval instead of failing the request.
+            return []
 
         results: list[dict[str, Any]] = []
         for p in points:
@@ -213,11 +218,17 @@ class HybridRetriever:
         return [RetrievedChunk(**item) for item in ranked]
 
     def retrieve(self, query: str, top_k: int = 12, doc_scope: str | None = None) -> list[RetrievedChunk]:
-        dense = self._dense_search(query=query, top_k=top_k, doc_scope=doc_scope)
+        try:
+            dense = self._dense_search(query=query, top_k=top_k, doc_scope=doc_scope)
+        except Exception:
+            dense = []
         try:
             sparse = self._bm25_search(query=query, top_k=top_k, doc_scope=doc_scope)
         except Exception:
             sparse = []
+
+        if not dense and not sparse:
+            return []
 
         if not sparse:
             return [

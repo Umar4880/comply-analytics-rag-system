@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 import warnings
 
-from docling.document_converter import DocumentConverter, PdfFormatOption
+from docling.document_converter import DocumentConverter, PdfFormatOption, WordFormatOption
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import (
     PdfPipelineOptions,
@@ -22,7 +22,7 @@ warnings.filterwarnings(
 class DocumentParser:
     """
     Responsible for ONE thing only:
-    Convert a PDF into raw StructuredChunks and UnstructuredChunks.
+    Convert a PDF/DOCX into raw StructuredChunks and UnstructuredChunks.
 
     Does NOT generate:
       - doc_id / chunk_id
@@ -41,6 +41,7 @@ class DocumentParser:
     _KNOWN_H1 = {
         "purpose of this document",
         "table of contents",
+        "version control",
     }
 
     # Sections to skip entirely — waste of embedding budget
@@ -63,7 +64,8 @@ class DocumentParser:
 
         return DocumentConverter(
             format_options={
-                InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
+                InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options),
+                InputFormat.DOCX: WordFormatOption(pipeline_options=pipeline_options)
             }
         )
 
@@ -91,6 +93,30 @@ class DocumentParser:
         if cls._RE_H1.match(t): return 1
         if t.lower() in cls._KNOWN_H1: return 1
         return None
+
+    @staticmethod
+    def _looks_like_heading_text(text: str) -> bool:
+        """
+        Heuristic used for DOCX fallback when heading numbers are absent.
+        Prevents promoting arbitrary bold snippets to headings.
+        """
+        t = text.strip()
+        if not t:
+            return False
+
+        # Long sentences are usually body text, not headings.
+        if len(t) > 120:
+            return False
+
+        words = t.split()
+        if len(words) > 14:
+            return False
+
+        # Lines ending with sentence punctuation are often prose.
+        if t.endswith((".", ":", ";", "?", "!")):
+            return False
+
+        return True
 
     # ── Buffer flush─────────────
 
@@ -141,6 +167,21 @@ class DocumentParser:
             return start, end
         except (IndexError, AttributeError):
             return 1, 1
+        
+    def is_framgment_table(self, chunk1, chunk2):
+        if chunk2.page_end != chunk1.page_end + 1:
+            return False
+        
+        if chunk1.heading_h1 != chunk2.heading_h1:
+            return False
+        
+        if chunk1.heading_h2 != chunk2.heading_h2:
+            return False
+        
+        if chunk1.heading_h3 != chunk2.heading_h3:
+            return False
+        
+        return True
 
     # ── Main parse───────────────
 
@@ -181,7 +222,11 @@ class DocumentParser:
 
             # # Skip everything under Table of Contents
             if current_h1.lower() in self._SKIP_H1:
+                # if element_type == "TableItem":
+                #    markdown_table = element.export_to_markdown(doc=result.document)
+                #    print(markdown_table)
                 if element_type == "SectionHeaderItem":
+                    print(element.text)
                     current_h1 = element.text
                     current_h2 = ""
                     current_h3 = ""
@@ -193,7 +238,15 @@ class DocumentParser:
                 heading_level = self._classify_heading(text)
 
                 if heading_level is None:
-                    # misclassified bold body text → treat as plain text
+                    is_docx = file_path.suffix.lower() == ".docx"
+                    candidate_level = int(_level) if isinstance(_level, int) else None
+                    if is_docx and candidate_level in (1, 2, 3) and self._looks_like_heading_text(text):
+                        heading_level = candidate_level
+                    else:
+                        heading_level = None
+
+                if heading_level is None:
+                    # Treat non-heading section items as body text.
                     if text:
                         if not text_buffer:
                             buffer_start_page = page_start
@@ -243,13 +296,15 @@ class DocumentParser:
 
             # ── TableItem (native Docling table) ──────────────────────────────
             elif element_type == "TableItem":
+                context = "\n".join(text_buffer)
                 markdown_table = element.export_to_markdown(doc=result.document)
+
                 try:
                     json_table = element.export_to_dataframe(doc=result.document)
                 except Exception:
                     json_table = None
 
-                unstructured_chunks.append(UnstructuredChunk(
+                final_chunk = UnstructuredChunk(
                     markdown_content=markdown_table,
                     json_content=json_table,
                     heading_h1=current_h1,
@@ -257,7 +312,19 @@ class DocumentParser:
                     heading_h3=current_h3,
                     page_start=page_start,
                     page_end=page_end,
-                ))
+                    context = context,
+                )
+                if unstructured_chunks:
+                    existing_chunk = unstructured_chunks[-1]
+                    page_start = existing_chunk.page_start
+                    if self.is_framgment_table(existing_chunk, final_chunk):
+                        import re
+                        cleaned_markdown = re.sub('[\||-]+\|\n', "", final_chunk.markdown_content)
+                        markdown_table = existing_chunk.markdown_content[:] +"\n"+ cleaned_markdown[:]
+                        final_chunk.markdown_content = markdown_table
+                        final_chunk.page_start = page_start
+                        del unstructured_chunks[-1]
+                unstructured_chunks.append(final_chunk)
 
         # final flush — remaining buffer after last element
         self._flush_buffer(
@@ -279,7 +346,7 @@ class DocumentParser:
 # ── Entry point─────────────────
 
 if __name__ == "__main__":
-    parser = DocumentParser("data/Comply M Sheet_Hungary.pdf")
+    parser = DocumentParser("app/data/EC+Sales+List+and+EC+Purchase+List (1).docx")
     doc    = parser.parse()
 
     print(f"\nDoc   : {doc.doc_name}")
@@ -303,7 +370,6 @@ if __name__ == "__main__":
             f.write(f"H1     : {chunk.heading_h1}\n")
             f.write(f"H2     : {chunk.heading_h2}\n")
             f.write(f"H3     : {chunk.heading_h3}\n")
-            f.write(f"context: {chunk.context[:100]}\n\n")
             f.write(f"{chunk.markdown_content}\n\n")
 
     print("\nOutput written to write.txt")

@@ -30,8 +30,64 @@ DEFAULT_DB_PATH = Path(__file__).resolve().parent.parent / "database" / "db" / "
 logger = logging.getLogger(__name__)
 
 
+def _fetch_citation_details(chunk_ids: list[str]) -> list[dict[str, Any]]:
+    if not chunk_ids:
+        return []
+
+    try:
+        qdrant = QdrantClient(url=os.getenv("QDRANT_URL", "http://localhost:6333"))
+        collection = os.getenv("QDRANT_COLLECTION", "documents")
+        from uuid import uuid5, NAMESPACE_URL
+
+        point_ids = [str(uuid5(NAMESPACE_URL, cid)) for cid in chunk_ids]
+        points = qdrant.retrieve(collection_name=collection, ids=point_ids, with_payload=True, with_vectors=False)
+
+        by_chunk: dict[str, dict[str, Any]] = {}
+        for point in points:
+            payload = point.payload or {}
+            cid = str(payload.get("chunk_id", ""))
+            if not cid:
+                continue
+            doc_name = str(payload.get("doc_name", "unknown"))
+            page_start = int(payload.get("page_start", 1) or 1)
+            page_end = int(payload.get("page_end", page_start) or page_start)
+            h1 = str(payload.get("heading_h1", "") or "").strip()
+            h2 = str(payload.get("heading_h2", "") or "").strip()
+            h3 = str(payload.get("heading_h3", "") or "").strip()
+            section = " > ".join(part for part in [h1, h2, h3] if part) or "N/A"
+            by_chunk[cid] = {
+                "chunk_id": cid,
+                "doc_name": doc_name,
+                "section": section,
+                "page_start": page_start,
+                "page_end": page_end,
+                "label": f"{doc_name} (Pages {page_start}-{page_end})",
+                "display": f"[{doc_name} section={section} pages={page_start}-{page_end} chunk_id={cid}]",
+            }
+
+        # Preserve incoming order.
+        return [by_chunk[cid] for cid in chunk_ids if cid in by_chunk]
+    except Exception:
+        return []
+
+
 def get_db_path() -> str:
     return os.getenv("DATABASE_PATH", str(DEFAULT_DB_PATH))
+
+
+def get_allowed_origins() -> list[str]:
+    raw = os.getenv("CORS_ALLOWED_ORIGINS", "")
+    parsed = [item.strip() for item in raw.split(",") if item.strip()]
+    defaults = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "http://192.168.10.8:3000",
+    ]
+    merged: list[str] = []
+    for origin in defaults + parsed:
+        if origin not in merged:
+            merged.append(origin)
+    return merged
 
 
 @asynccontextmanager
@@ -46,7 +102,8 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=get_allowed_origins(),
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[0-1])\.\d+\.\d+)(:\d+)?$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -111,7 +168,15 @@ def chat(request: ChatRequest):
             payload = {"type": "error", "error": "Chat failed", "code": "CHAT_FAILED", "detail": str(e)}
             yield f"data: {json.dumps(payload)}\n\n"
 
-    return StreamingResponse(event_gen(), media_type="text/event-stream")
+    return StreamingResponse(
+        event_gen(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache, no-transform",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no",
+        },
+    )
 
 
 @app.get("/api/sessions/{user_id}")
@@ -153,10 +218,17 @@ def get_messages(session_id: str):
                 item["cited_chunks"] = json.loads(item.get("cited_chunks") or "[]")
             except Exception:
                 item["cited_chunks"] = []
+            item["citation_details"] = _fetch_citation_details(item["cited_chunks"])
             items.append(item)
         return items
     finally:
         conn.close()
+
+
+@app.get("/api/citations")
+def get_citations(ids: str = ""):
+    chunk_ids = [part.strip() for part in ids.split(",") if part.strip()]
+    return _fetch_citation_details(chunk_ids)
 
 
 @app.delete("/api/sessions/{session_id}")
@@ -195,8 +267,8 @@ def get_documents():
 
 @app.post("/api/documents/upload")
 def upload_document(file: UploadFile = File(...)):
-    if not file.filename.lower().endswith(".pdf"):
-        return err("Only PDF uploads are supported", "INVALID_FILE_TYPE", status=400)
+    if not file.filename.lower().endswith((".pdf", ".docx")):
+        return err("Only PDF and DOCX uploads are supported", "INVALID_FILE_TYPE", status=400)
 
     data_dir = Path("app/data")
     data_dir.mkdir(parents=True, exist_ok=True)

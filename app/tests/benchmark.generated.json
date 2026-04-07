@@ -9,6 +9,141 @@
     "source_doc": "Comply Control Lists.pdf"
   },
   {
+    "id": "comply_control_lists_02",
+    "question": "According to Comply Control Lists.pdf, what does it state about 'Note: Frequency Validation If during onboarding, the user selects a'?",
+    "reference_answer": "Note: Frequency Validation If during onboarding, the user selects a different frequency to that configured in the excel file for the VAT Return, then an Error will be displayed and the Frequency for the Control List will be automatically set to the same as the VAT Return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists.pdf"
+  },
+  {
+    "id": "comply_control_lists_03",
+    "question": "In Comply Control Lists.pdf, what is Comply: Control Lists 9 After the Data File?",
+    "reference_answer": "Comply: Control Lists 9 After the Data File is deleted Once the Data File is deleted from the VAT Return, a few things happen.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists.pdf"
+  },
+  {
+    "id": "comply_control_lists_04",
+    "question": "According to Comply Control Lists.pdf, what does it state about 'Please Note: The user can send a Control List back'?",
+    "reference_answer": "Please Note: The user can send a Control List back to To Prepare also without impacting the associated VAT Return Comply: Control Lists 16 3.5.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists.pdf"
+  },
+  {
+    "id": "comply_control_lists_05",
+    "question": "In Comply Control Lists.pdf, what is Upload Files It?",
+    "reference_answer": "Upload Files It is important to note that adding/editing transactional data should be completed on the corresponding VAT Return (the changes made on the VAT Return will be automatically reflected in the Control List).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists.pdf"
+  },
+  {
+    "id": "comply_control_lists_cz_01",
+    "question": "According to Comply Control Lists_CZ.pdf, what does it state about 'Code of VAT Regime – Box A4 The Code of'?",
+    "reference_answer": "Code of VAT Regime – Box A4 The Code of VAT Regime column in Box A4 contains a drop-down option where the user can select from one of 4 options: • Blank • 0 – (Regular Supply).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists_CZ.pdf"
+  },
+  {
+    "id": "comply_control_lists_cz_02",
+    "question": "In Comply Control Lists_CZ.pdf, what is Purpose of this document The purpose of this document?",
+    "reference_answer": "Purpose of this document The purpose of this document is to provide guidance, context, and instruction for users required to file Control Lists.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists_CZ.pdf"
+  },
+  {
+    "id": "comply_control_lists_cz_03",
+    "question": "In Comply Control Lists_CZ.pdf, what are NIL Returns Where NIL Returns?",
+    "reference_answer": "NIL Returns Where NIL Returns are required, the user (Preparer or Reviewer) can enable/disable the NIL Return using the Toggle switch.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists_CZ.pdf"
+  },
+  {
+    "id": "comply_control_lists_cz_04",
+    "question": "According to Comply Control Lists_CZ.pdf, what does it state about 'The user should perform the relevant checks and processes during'?",
+    "reference_answer": "The user should perform the relevant checks and processes during Data Validation.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists_CZ.pdf"
+  },
+  {
+    "id": "comply_control_lists_cz_05",
+    "question": "According to Comply Control Lists_CZ.pdf, what does it state about 'XML The user can view and submit the completed Return'?",
+    "reference_answer": "XML The user can view and submit the completed Return via the XML file.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply Control Lists_CZ.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_01",
+    "question": "In Comply M Sheet_Hungary.pdf, what is 17 Comply: M Sheet (Hungary) 3 Purpose of this document The purpose of this document?",
+    "reference_answer": "17 Comply: M Sheet (Hungary) 3 Purpose of this document The purpose of this document is to provide guidance, context, and instruction to users preparing M Sheets for Hungary as part of the VAT Return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_02",
+    "question": "In Comply M Sheet_Hungary.pdf, what are Edit Numerical Boxes Users who?",
+    "reference_answer": "Edit Numerical Boxes Users who are preparing a VAT Return for Hungary can, where required, amend/edit the List Purchases box.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_03",
+    "question": "In Comply M Sheet_Hungary.pdf, what are Navigate to: Return > Return Review > Numerical Boxes The new boxes?",
+    "reference_answer": "Navigate to: Return > Return Review > Numerical Boxes The new boxes are generated at the bottom of the Numerical Boxes list, so the user will be required to scroll to locate them.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_04",
+    "question": "In Comply M Sheet_Hungary.pdf, what is Notes: • If the “Date of Receipt”?",
+    "reference_answer": "Notes: • If the “Date of Receipt” is mapped in the Template for VAT Returns, and is included in the uploaded data file, then this will be displayed in the List Purchases Credit Notes box (as shown above).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_m_sheet_hungary_05",
+    "question": "According to Comply M Sheet_Hungary.pdf, what does it state about 'Example: Edit Supplier VAT Number The user can elect to'?",
+    "reference_answer": "Example: Edit Supplier VAT Number The user can elect to change the Supplier VAT number for either one row, multiple rows or Apply to All rows.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply M Sheet_Hungary.pdf"
+  },
+  {
+    "id": "comply_how_to_upload_files_01",
+    "question": "According to Comply_ How to Upload Files.pdf, what does it state about 'This will include: • Uploading Data Files for Return (For'?",
+    "reference_answer": "This will include: • Uploading Data Files for Return (For clients not using API for uploads) • Files uploaded (For Clients using API for Uploads) • Uploading Supporting Documents Comply: Returns Processing 4 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_ How to Upload Files.pdf"
+  },
+  {
     "id": "comply_how_to_upload_files_02",
     "question": "In Comply_ How to Upload Files.pdf, what is Upload a Data File for Return (API Users) For clients using APIs for data upload, it?",
     "reference_answer": "Upload a Data File for Return (API Users) For clients using APIs for data upload, it is key that during onboarding the Data Provider role is assigned to System Bot (as opposed to a physical user).",
@@ -27,6 +162,69 @@
     "source_doc": "Comply_ How to Upload Files.pdf"
   },
   {
+    "id": "comply_how_to_upload_files_04",
+    "question": "In Comply_ How to Upload Files.pdf, what is Comply: Returns Processing 8 Based on the assigned due date for the Data Preparation step, a notification?",
+    "reference_answer": "Comply: Returns Processing 8 Based on the assigned due date for the Data Preparation step, a notification is sent to the Data Preparer (providing they have configured their notifications settings), and the Return will now be visible for them in their Returns section once they login.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_ How to Upload Files.pdf"
+  },
+  {
+    "id": "comply_how_to_upload_files_05",
+    "question": "According to Comply_ How to Upload Files.pdf, what does it state about 'Data Due Return Status Displayed Prior to first transaction pushed'?",
+    "reference_answer": "Data Due Return Status Displayed Prior to first transaction pushed via API Data Due After first transaction pushed via API To Prepare Comply: Returns Processing 10 2.1.1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_ How to Upload Files.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_01",
+    "question": "In Comply_Configuring Intrastat Reurns.pdf, what is 45 Comply: Configuring Comply for Intrastat Returns 3 Purpose of this document The purpose of this document?",
+    "reference_answer": "45 Comply: Configuring Comply for Intrastat Returns 3 Purpose of this document The purpose of this document is to provide guidance, context, and instruction on the steps required to configure comply for a Company to file Intrastat Returns.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_02",
+    "question": "In Comply_Configuring Intrastat Reurns.pdf, what is There are 2 Types of Intrastat Return: • Intrastat Arrivals – This?",
+    "reference_answer": "There are 2 Types of Intrastat Return: • Intrastat Arrivals – This is the fileable return on Purchases.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_03",
+    "question": "According to Comply_Configuring Intrastat Reurns.pdf, what does it state about 'Sample Template for Finland: Please note: Depending on the Entities'?",
+    "reference_answer": "Sample Template for Finland: Please note: Depending on the Entities and their requirements, you may be required to create multiple Templates: • VAT Returns • Intrastat Arrivals Simplified • Intrastat Arrivals Detailed • Intrastat Dispatches Simplified • Intrastat Dispatched Detailed Comply: Configuring Comply for Intrastat Returns 8 2.2.2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_04",
+    "question": "In Comply_Configuring Intrastat Reurns.pdf, what are If a company exceeds any of these thresholds, then they?",
+    "reference_answer": "If a company exceeds any of these thresholds, then they are required to file a more detailed Intrastat Return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
+    "id": "comply_configuring_intrastat_reurns_05",
+    "question": "According to Comply_Configuring Intrastat Reurns.pdf, what does it state about 'Please note, you may be required to file varying types'?",
+    "reference_answer": "Please note, you may be required to file varying types and subtypes of Intrastat Returns.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring Intrastat Reurns.pdf"
+  },
+  {
     "id": "comply_configuring_user_details_01",
     "question": "In Comply_Configuring User Details.pdf, what are Configure User Notifications Notifications?",
     "reference_answer": "Configure User Notifications Notifications are a key part of the process for each user role.",
@@ -43,5 +241,1517 @@
     "expected_chunk_ids": [],
     "expect_no_answer": false,
     "source_doc": "Comply_Configuring User Details.pdf"
+  },
+  {
+    "id": "comply_configuring_user_details_03",
+    "question": "According to Comply_Configuring User Details.pdf, what does it state about 'Example 2: Once a data provider uploads the data file'?",
+    "reference_answer": "Example 2: Once a data provider uploads the data file, the preparer receives a notification to say they have a return assigned to them, which has a task due.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Details.pdf"
+  },
+  {
+    "id": "comply_configuring_user_details_04",
+    "question": "In Comply_Configuring User Details.pdf, what is Below as a sample of an email reminder: Comply: Configuring User Details 16 Note: If the user?",
+    "reference_answer": "Below as a sample of an email reminder: Comply: Configuring User Details 16 Note: If the user is responsible for multiple roles and multiple returns, the reminder may be combined and grouped appropriately in the email.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Details.pdf"
+  },
+  {
+    "id": "comply_configuring_user_details_05",
+    "question": "According to Comply_Configuring User Details.pdf, what does it state about 'Report Role The Report Role section displays the role(s) the'?",
+    "reference_answer": "Report Role The Report Role section displays the role(s) the user has been assigned to perform during the Return processing cycle.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Details.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_01",
+    "question": "According to Comply_Configuring User Roles.pdf, what does it state about 'Note 2 – The Reviewer and Approver roles can be'?",
+    "reference_answer": "Note 2 – The Reviewer and Approver roles can be assigned to the system user which will automatically approve the return for that stage in the process.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_02",
+    "question": "According to Comply_Configuring User Roles.pdf, what does it state about 'In either case, these roles must be assigned to one'?",
+    "reference_answer": "In either case, these roles must be assigned to one of the following groups: • Client Staff • Taxback International (TBI) Staff • System Bot (for use when using API’s for Data Upload) Comply: Configuring User Roles 5 Note 1: A Company could potentially consist of multiple jurisdictions.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_03",
+    "question": "According to Comply_Configuring User Roles.pdf, what does it state about 'If so, roles/users should be assigned to tasks for each'?",
+    "reference_answer": "If so, roles/users should be assigned to tasks for each jurisdiction as required.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_04",
+    "question": "According to Comply_Configuring User Roles.pdf, what does it state about 'Configuring User Roles Comply: Configuring User Roles 1 Version Control'?",
+    "reference_answer": "Configuring User Roles Comply: Configuring User Roles 1 Version Control Version Date Author Details 1.0 22nd Nov 2022 Keith O’Sullivan Published Comply: Configuring User Roles 2 Table of Contents 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_configuring_user_roles_05",
+    "question": "In Comply_Configuring User Roles.pdf, what are Overview There?",
+    "reference_answer": "Overview There are 5 Mandatory roles in Comply: • Data Provider – person responsible for providing the data for the return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Configuring User Roles.pdf"
+  },
+  {
+    "id": "comply_control_list_est_01",
+    "question": "In Comply_Control List_EST.pdf, what is 14 Comply: Control List (Estonia) 3 Purpose of this document The purpose of this document?",
+    "reference_answer": "14 Comply: Control List (Estonia) 3 Purpose of this document The purpose of this document is to provide guidance, context, and instruction to users preparing Control Lists for Estonia as part of the VAT Return 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Control List_EST.pdf"
+  },
+  {
+    "id": "comply_control_list_est_02",
+    "question": "In Comply_Control List_EST.pdf, what are Navigate to: Return > Return Review > Numerical Boxes The new boxes?",
+    "reference_answer": "Navigate to: Return > Return Review > Numerical Boxes The new boxes are generated at the bottom of the Numerical Boxes list, so the user will be required to scroll to locate them.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Control List_EST.pdf"
+  },
+  {
+    "id": "comply_control_list_est_03",
+    "question": "In Comply_Control List_EST.pdf, what are Edit Numerical Boxes The following 2 numerical boxes?",
+    "reference_answer": "Edit Numerical Boxes The following 2 numerical boxes are available: • List Sales • List Purchases For users who are preparing a VAT Return for Estonia and need to amend/edit the List Sales/List Purchases numerical boxes After clicking the Eye icon, this opens the Declaration Details screen for either List Sales or List Purchases.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Control List_EST.pdf"
+  },
+  {
+    "id": "comply_control_list_est_04",
+    "question": "According to Comply_Control List_EST.pdf, what does it state about 'These drop-downs consist of different values for both List Sales'?",
+    "reference_answer": "These drop-downs consist of different values for both List Sales and List Purchases: List Sales: • Blank • 01 • 02 • 03 To locate this column, the user may be required to scroll across.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Control List_EST.pdf"
+  },
+  {
+    "id": "comply_control_list_est_05",
+    "question": "According to Comply_Control List_EST.pdf, what does it state about 'Comply: Control List (Estonia) 11 List Purchases: • Blank •'?",
+    "reference_answer": "Comply: Control List (Estonia) 11 List Purchases: • Blank • 11 • 12 To locate this column, the user may be required to scroll across.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Control List_EST.pdf"
+  },
+  {
+    "id": "comply_how_to_configure_vat_groups_1_01",
+    "question": "In Comply_How to Configure VAT Groups (1).pdf, what is Select the relevant option (If not the default Consolidated) Please note: It?",
+    "reference_answer": "Select the relevant option (If not the default Consolidated) Please note: It is possible that other Return Types are configured and required (VAT/VIES/Intrastat etc).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Configure VAT Groups (1).pdf"
+  },
+  {
+    "id": "comply_how_to_configure_vat_groups_1_02",
+    "question": "According to Comply_How to Configure VAT Groups (1).pdf, what does it state about 'The VAT Group Submission section for this entity has 2'?",
+    "reference_answer": "The VAT Group Submission section for this entity has 2 return types configured: VAT Return and Intrastat Dispatches.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Configure VAT Groups (1).pdf"
+  },
+  {
+    "id": "comply_how_to_configure_vat_groups_1_03",
+    "question": "According to Comply_How to Configure VAT Groups (1).pdf, what does it state about 'Configure VAT Groups During Onboarding VAT Groups can be configured'?",
+    "reference_answer": "Configure VAT Groups During Onboarding VAT Groups can be configured as part of the onboarding process by following these steps: 2.1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Configure VAT Groups (1).pdf"
+  },
+  {
+    "id": "comply_how_to_configure_vat_groups_1_04",
+    "question": "In Comply_How to Configure VAT Groups (1).pdf, what are (Note: these?",
+    "reference_answer": "(Note: these are not marked as mandatory, but are required if configuring VAT Groups) 6.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Configure VAT Groups (1).pdf"
+  },
+  {
+    "id": "comply_how_to_configure_vat_groups_1_05",
+    "question": "In Comply_How to Configure VAT Groups (1).pdf, what is Comply: Configuring VAT Groups 17 The next step?",
+    "reference_answer": "Comply: Configuring VAT Groups 17 The next step is to configure the Submission Type.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Configure VAT Groups (1).pdf"
+  },
+  {
+    "id": "comply_how_to_create_a_self_revision_01",
+    "question": "In Comply_How to Create a Self Revision.pdf, what are Entity has 10 transactions worth €100k of Domestic Sales which?",
+    "reference_answer": "Entity has 10 transactions worth €100k of Domestic Sales which are reported in the submitted return, however 15 transactions worth €150k are actually required to be submitted.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Create a Self Revision.pdf"
+  },
+  {
+    "id": "comply_how_to_create_a_self_revision_02",
+    "question": "In Comply_How to Create a Self Revision.pdf, what is Create a Self-Revision As mentioned above, this functionality?",
+    "reference_answer": "Create a Self-Revision As mentioned above, this functionality is only available to users who are assigned the role of Reviewer for a specific submitted return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Create a Self Revision.pdf"
+  },
+  {
+    "id": "comply_how_to_create_a_self_revision_03",
+    "question": "According to Comply_How to Create a Self Revision.pdf, what does it state about 'The Return can now be prepared and the user can'?",
+    "reference_answer": "The Return can now be prepared and the user can continue to process it through to Submission.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Create a Self Revision.pdf"
+  },
+  {
+    "id": "comply_how_to_create_a_self_revision_04",
+    "question": "According to Comply_How to Create a Self Revision.pdf, what does it state about 'Introduction A Self Revision allows the Comply User to either'?",
+    "reference_answer": "Introduction A Self Revision allows the Comply User to either: • Create amendments to a submitted return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Create a Self Revision.pdf"
+  },
+  {
+    "id": "comply_how_to_create_a_self_revision_05",
+    "question": "In Comply_How to Create a Self Revision.pdf, what is Please note: This functionality?",
+    "reference_answer": "Please note: This functionality is only available to users who have been assigned the role of Preparer or Reviewer.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Create a Self Revision.pdf"
+  },
+  {
+    "id": "comply_how_to_process_returns_for_vat_groups_01",
+    "question": "According to Comply_How to Process Returns for  VAT Groups.pdf, what does it state about 'Example 1: Each of the VAT Calculation returns must be'?",
+    "reference_answer": "Example 1: Each of the VAT Calculation returns must be processed from Data Due through To Submit before the Consolidated Return can be prepared.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Process Returns for  VAT Groups.pdf"
+  },
+  {
+    "id": "comply_how_to_process_returns_for_vat_groups_02",
+    "question": "In Comply_How to Process Returns for  VAT Groups.pdf, what is 22 Comply: Processing Returns for VAT Groups 3 Overview Purpose of this document The purpose of this document?",
+    "reference_answer": "22 Comply: Processing Returns for VAT Groups 3 Overview Purpose of this document The purpose of this document is to provide guidance, context, and instruction on Processing Returns in Comply for VAT Groups.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Process Returns for  VAT Groups.pdf"
+  },
+  {
+    "id": "comply_how_to_process_returns_for_vat_groups_03",
+    "question": "According to Comply_How to Process Returns for  VAT Groups.pdf, what does it state about 'Then Comply automatically generates returns with the following Return Types'?",
+    "reference_answer": "Then Comply automatically generates returns with the following Return Types: Comply: Processing Returns for VAT Groups 14 • Consolidated – The Consolidated Return will be generated for the VAT Group Representative.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Process Returns for  VAT Groups.pdf"
+  },
+  {
+    "id": "comply_how_to_process_returns_for_vat_groups_04",
+    "question": "In Comply_How to Process Returns for  VAT Groups.pdf, what are Comply: Processing Returns for VAT Groups 21 Example: Ensure both Individual Returns and the Consolidated Return?",
+    "reference_answer": "Comply: Processing Returns for VAT Groups 21 Example: Ensure both Individual Returns and the Consolidated Return are processed through to ‘To Submit’.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Process Returns for  VAT Groups.pdf"
+  },
+  {
+    "id": "comply_how_to_process_returns_for_vat_groups_05",
+    "question": "According to Comply_How to Process Returns for  VAT Groups.pdf, what does it state about '• If the VAT Group Representative uploads a data file'?",
+    "reference_answer": "• If the VAT Group Representative uploads a data file for their own VAT Calculation, then the transactions should be associated with the consolidated return then the status moves to ‘To Submit’.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_How to Process Returns for  VAT Groups.pdf"
+  },
+  {
+    "id": "comply_notifications_01",
+    "question": "In Comply_Notifications.pdf, what are Configure User Notifications Notifications?",
+    "reference_answer": "Configure User Notifications Notifications are a key part of the process for each user role.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Notifications.pdf"
+  },
+  {
+    "id": "comply_notifications_02",
+    "question": "In Comply_Notifications.pdf, what is Viewing Email Notifications Example 1: Once a return?",
+    "reference_answer": "Viewing Email Notifications Example 1: Once a return is due, the Data Provider will receive a notification identifying that the data file is due to be uploaded and will display a status of Data Due.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Notifications.pdf"
+  },
+  {
+    "id": "comply_notifications_03",
+    "question": "According to Comply_Notifications.pdf, what does it state about 'Example 2: Once a data provider uploads the data file'?",
+    "reference_answer": "Example 2: Once a data provider uploads the data file, the preparer receives a notification to say they have a return assigned to them, which has a task due.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Notifications.pdf"
+  },
+  {
+    "id": "comply_notifications_04",
+    "question": "In Comply_Notifications.pdf, what is Action Required: Return Data Upload – Deadline Passed The following E-mail?",
+    "reference_answer": "Action Required: Return Data Upload – Deadline Passed The following E-mail is sent to the Data Provider at 7am on the next working day after the Data Upload was due.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Notifications.pdf"
+  },
+  {
+    "id": "comply_notifications_05",
+    "question": "In Comply_Notifications.pdf, what is Action Required: Return Approval – Deadline Passed The following E-mail?",
+    "reference_answer": "Action Required: Return Approval – Deadline Passed The following E-mail is sent to the Data Provider at 7am local time on the working day after the return is due to be approved.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Notifications.pdf"
+  },
+  {
+    "id": "comply_partner_vault_01",
+    "question": "According to Comply_Partner Vault.pdf, what does it state about '• Activate/Deactivate User Comply: Partner Vault 13 • Edit User'?",
+    "reference_answer": "• Activate/Deactivate User Comply: Partner Vault 13 • Edit User Clicking this allows only the Editing of the Name field.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Partner Vault.pdf"
+  },
+  {
+    "id": "comply_partner_vault_02",
+    "question": "According to Comply_Partner Vault.pdf, what does it state about 'Comply: Partner Vault 15 The user must then enter the'?",
+    "reference_answer": "Comply: Partner Vault 15 The user must then enter the new users Name and Email Address.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Partner Vault.pdf"
+  },
+  {
+    "id": "comply_partner_vault_03",
+    "question": "According to Comply_Partner Vault.pdf, what does it state about 'Activate/Deactivate User • Activate/Deactivate user: Comply: Partner Vault 17 4.2.3'?",
+    "reference_answer": "Activate/Deactivate User • Activate/Deactivate user: Comply: Partner Vault 17 4.2.3.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Partner Vault.pdf"
+  },
+  {
+    "id": "comply_partner_vault_04",
+    "question": "In Comply_Partner Vault.pdf, what is The Partner Vault Please Note: This area?",
+    "reference_answer": "The Partner Vault Please Note: This area is managed by the Partner Admin User The Partner Vault has 2 menu options: • Companies • Staff 3.1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Partner Vault.pdf"
+  },
+  {
+    "id": "comply_partner_vault_05",
+    "question": "According to Comply_Partner Vault.pdf, what does it state about 'Here the user has 3 Tabs from which they can'?",
+    "reference_answer": "Here the user has 3 Tabs from which they can view specific details/perform certain tasks: 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Partner Vault.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_api_v1_1_01",
+    "question": "In Comply_Returns Processing_Self Service_API_v1.1.pdf, what are Configure User Notifications Notifications?",
+    "reference_answer": "Configure User Notifications Notifications are a key part of the process for each user role.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_API_v1.1.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_api_v1_1_02",
+    "question": "In Comply_Returns Processing_Self Service_API_v1.1.pdf, what is Processing a Return (API Users) For clients using API’s for data upload, it?",
+    "reference_answer": "Processing a Return (API Users) For clients using API’s for data upload, it is key that during onboarding the Data Provider role is assigned to System Bot (as opposed to a physical user).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_API_v1.1.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_api_v1_1_03",
+    "question": "In Comply_Returns Processing_Self Service_API_v1.1.pdf, what is Comply processes a return through the following steps/processes which are in turn assigned to a specific user: Data Provider Data Preparer Approver Reviewer This role?",
+    "reference_answer": "Comply processes a return through the following steps/processes which are in turn assigned to a specific user: Data Provider Data Preparer Approver Reviewer This role is assigned to a System user, which allows clients to use an API to upload relevant return data.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_API_v1.1.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_api_v1_1_04",
+    "question": "According to Comply_Returns Processing_Self Service_API_v1.1.pdf, what does it state about 'Select a relevant notification type, from the following options: •'?",
+    "reference_answer": "Select a relevant notification type, from the following options: • Once a Day • Once every two days • Once every three days • Once a week • Once a month • No notifications Comply: Returns Processing 8 1.2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_API_v1.1.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_api_v1_1_05",
+    "question": "In Comply_Returns Processing_Self Service_API_v1.1.pdf, what is Viewing Email Notifications Example 1: Once a return?",
+    "reference_answer": "Viewing Email Notifications Example 1: Once a return is due, the Data Provider will receive a notification identifying that the data file is due to be uploaded and will display a status of Data Due.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_API_v1.1.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_non_api_v1_1_01",
+    "question": "In Comply_Returns Processing_Self Service_Non API_v1.1.pdf, what is 62 Comply: Returns Processing 4 Overview Purpose of this document The purpose of this document?",
+    "reference_answer": "62 Comply: Returns Processing 4 Overview Purpose of this document The purpose of this document is to provide guidance, context, and instruction for users who are assigned the role of Data Provider.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_Non API_v1.1.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_non_api_v1_1_02",
+    "question": "According to Comply_Returns Processing_Self Service_Non API_v1.1.pdf, what does it state about 'Comply: Returns Processing 5 During set up, users will be'?",
+    "reference_answer": "Comply: Returns Processing 5 During set up, users will be assigned their individual roles.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_Non API_v1.1.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_non_api_v1_1_03",
+    "question": "In Comply_Returns Processing_Self Service_Non API_v1.1.pdf, what are Configure User Notifications Notifications?",
+    "reference_answer": "Configure User Notifications Notifications are a key part of the process for each user role.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_Non API_v1.1.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_non_api_v1_1_04",
+    "question": "According to Comply_Returns Processing_Self Service_Non API_v1.1.pdf, what does it state about 'Users can view their assigned roles by navigating to the'?",
+    "reference_answer": "Users can view their assigned roles by navigating to the Security menu: Security > User Details In this example, you can see that the user has actually been assigned to each role across the return process.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_Non API_v1.1.pdf"
+  },
+  {
+    "id": "comply_returns_processing_self_service_non_api_v1_1_05",
+    "question": "According to Comply_Returns Processing_Self Service_Non API_v1.1.pdf, what does it state about 'Select a relevant notification type, from the following options: •'?",
+    "reference_answer": "Select a relevant notification type, from the following options: • Once a Day • Once every two days • Once every three days • Once a week • Once a month • No notifications Comply: Returns Processing 9 1.2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Returns Processing_Self Service_Non API_v1.1.pdf"
+  },
+  {
+    "id": "comply_saf_t_v1_2_01",
+    "question": "According to Comply_SAF-T_v1.2.pdf, what does it state about 'Comply: SAF-T (Poland) 13 Filter When the user requires one'?",
+    "reference_answer": "Comply: SAF-T (Poland) 13 Filter When the user requires one of these indicators to be configured (Set to 1 or reset to Blank), then they should: 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_SAF-T_v1.2.pdf"
+  },
+  {
+    "id": "comply_saf_t_v1_2_02",
+    "question": "In Comply_SAF-T_v1.2.pdf, what are When the user visits the Return Review screen on an Amendment Return, and clicks View Return, then the following 3 (Period specific) XML templates files?",
+    "reference_answer": "When the user visits the Return Review screen on an Amendment Return, and clicks View Return, then the following 3 (Period specific) XML templates files are displayed.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_SAF-T_v1.2.pdf"
+  },
+  {
+    "id": "comply_saf_t_v1_2_03",
+    "question": "In Comply_SAF-T_v1.2.pdf, what is 24 Comply: SAF-T (Poland) 3 Purpose of this document The purpose of this document?",
+    "reference_answer": "24 Comply: SAF-T (Poland) 3 Purpose of this document The purpose of this document is to provide guidance, context, and instruction to users preparing returns for Jurisdictions where SAF-T is a requirement.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_SAF-T_v1.2.pdf"
+  },
+  {
+    "id": "comply_saf_t_v1_2_04",
+    "question": "In Comply_SAF-T_v1.2.pdf, what are Navigate to: Return > Return Review > Numerical Boxes The new boxes?",
+    "reference_answer": "Navigate to: Return > Return Review > Numerical Boxes The new boxes are generated at the bottom of the Numerical Boxes list, so the user will be required to scroll to locate them.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_SAF-T_v1.2.pdf"
+  },
+  {
+    "id": "comply_saf_t_v1_2_05",
+    "question": "According to Comply_SAF-T_v1.2.pdf, what does it state about 'Return Review Screen Once the Data has been uploaded (via'?",
+    "reference_answer": "Return Review Screen Once the Data has been uploaded (via API or File Upload), the data goes through the relevant data validation and generates the relevant boxes.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_SAF-T_v1.2.pdf"
+  },
+  {
+    "id": "comply_the_scheduler_01",
+    "question": "According to Comply_The Scheduler.pdf, what does it state about 'Purpose of this document The scheduler allows the user to'?",
+    "reference_answer": "Purpose of this document The scheduler allows the user to configure the number of days it will take to complete each stage in the return process.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_The Scheduler.pdf"
+  },
+  {
+    "id": "comply_the_scheduler_02",
+    "question": "In Comply_The Scheduler.pdf, what is There are 5 stages which must be set, these are: • Data Due • To Prepare • To Review • To Approve • To Submit Note: The number of days between each stage?",
+    "reference_answer": "There are 5 stages which must be set, these are: • Data Due • To Prepare • To Review • To Approve • To Submit Note: The number of days between each stage is set by default but the user may decide to amend this timeframe.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_The Scheduler.pdf"
+  },
+  {
+    "id": "comply_the_scheduler_03",
+    "question": "According to Comply_The Scheduler.pdf, what does it state about 'Configuring the Scheduler To set up the scheduler the user'?",
+    "reference_answer": "Configuring the Scheduler To set up the scheduler the user should follow these steps: 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_The Scheduler.pdf"
+  },
+  {
+    "id": "comply_the_scheduler_04",
+    "question": "According to Comply_The Scheduler.pdf, what does it state about 'This opens the VAT Return displaying 2 schedule options: •'?",
+    "reference_answer": "This opens the VAT Return displaying 2 schedule options: • VAT Return Scheduler • Payment Scheduler – This relates to TBI Pay and will be covered in a later relevant guide.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_The Scheduler.pdf"
+  },
+  {
+    "id": "comply_the_scheduler_05",
+    "question": "In Comply_The Scheduler.pdf, what is Comply: The Scheduler 6 For the VAT Return Scheduler, the most important date to consider?",
+    "reference_answer": "Comply: The Scheduler 6 For the VAT Return Scheduler, the most important date to consider is the Submission Date.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_The Scheduler.pdf"
+  },
+  {
+    "id": "comply_user_management_01",
+    "question": "According to Comply_User Management.pdf, what does it state about 'Actions The admin user can perform 2 actions from here'?",
+    "reference_answer": "Actions The admin user can perform 2 actions from here: • Activate/Deactivate User • Edit User 2.5.1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_User Management.pdf"
+  },
+  {
+    "id": "comply_user_management_02",
+    "question": "According to Comply_User Management.pdf, what does it state about 'User Management Comply: User Management 1 Version Control Version Date'?",
+    "reference_answer": "User Management Comply: User Management 1 Version Control Version Date Author Details 1.0 6th June 2023 Keith O’Sullivan Published Comply: User Management 2 Table of Contents 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_User Management.pdf"
+  },
+  {
+    "id": "comply_user_management_03",
+    "question": "According to Comply_User Management.pdf, what does it state about 'Please note: This can also be set in the Vault…see'?",
+    "reference_answer": "Please note: This can also be set in the Vault…see image below Comply: User Management 10",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_User Management.pdf"
+  },
+  {
+    "id": "comply_user_management_04",
+    "question": "According to Comply_User Management.pdf, what does it state about 'Search For clients with large numbers of users, the view'?",
+    "reference_answer": "Search For clients with large numbers of users, the view can be searched easily to locate a specific user as required.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_User Management.pdf"
+  },
+  {
+    "id": "comply_user_management_05",
+    "question": "According to Comply_User Management.pdf, what does it state about 'This requires the user to upload a preconfigured spreadsheet with'?",
+    "reference_answer": "This requires the user to upload a preconfigured spreadsheet with the new user details.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_User Management.pdf"
+  },
+  {
+    "id": "comply_validations_rules_01",
+    "question": "In Comply_Validations Rules.pdf, what is Type Description Error An error occurs where there?",
+    "reference_answer": "Type Description Error An error occurs where there is a problem with mandatory values or data which must be rectified before the VAT Return can continue to be processed.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Validations Rules.pdf"
+  },
+  {
+    "id": "comply_validations_rules_02",
+    "question": "According to Comply_Validations Rules.pdf, what does it state about 'Please note: Only Admin users of Comply can view/configure rules'?",
+    "reference_answer": "Please note: Only Admin users of Comply can view/configure rules Comply: Configuring Validation Rules 4 3.2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Validations Rules.pdf"
+  },
+  {
+    "id": "comply_validations_rules_03",
+    "question": "According to Comply_Validations Rules.pdf, what does it state about 'Example: For this exercise, we want to rule to apply'?",
+    "reference_answer": "Example: For this exercise, we want to rule to apply to VAT Returns only in the UK for the Entity PL 1 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Validations Rules.pdf"
+  },
+  {
+    "id": "comply_validations_rules_04",
+    "question": "According to Comply_Validations Rules.pdf, what does it state about 'Example: For this exercise, we want the rule to apply'?",
+    "reference_answer": "Example: For this exercise, we want the rule to apply to VAT Returns only in Albania for the Entity PL 1 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Validations Rules.pdf"
+  },
+  {
+    "id": "comply_validations_rules_05",
+    "question": "In Comply_Validations Rules.pdf, what is Warning If triggered, a warning?",
+    "reference_answer": "Warning If triggered, a warning is used to bring attention to data which is outside the validation criteria but which is not mandatory and does not stop the return being processed or filed.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Comply_Validations Rules.pdf"
+  },
+  {
+    "id": "finland_api_v1_1_internal_01",
+    "question": "According to Finland API_v1.1_Internal.pdf, what does it state about 'Comply : API Submission (Finland) 8 Return Status The Status'?",
+    "reference_answer": "Comply : API Submission (Finland) 8 Return Status The Status of the Return changes to Submitted to TA for Processing.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Finland API_v1.1_Internal.pdf"
+  },
+  {
+    "id": "finland_api_v1_1_internal_02",
+    "question": "According to Finland API_v1.1_Internal.pdf, what does it state about '• VAT Returns • EC Sales Comply : API Submission'?",
+    "reference_answer": "• VAT Returns • EC Sales Comply : API Submission (Finland) 4 2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Finland API_v1.1_Internal.pdf"
+  },
+  {
+    "id": "finland_api_v1_1_internal_03",
+    "question": "According to Finland API_v1.1_Internal.pdf, what does it state about 'TBI Representative Details: • Name: First Name, Surname • Finnish'?",
+    "reference_answer": "TBI Representative Details: • Name: First Name, Surname • Finnish Foreigners User Identifier (UID): 545310351F • Mandate Theme: Processing log, interface and report data related to income data.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Finland API_v1.1_Internal.pdf"
+  },
+  {
+    "id": "finland_api_v1_1_internal_04",
+    "question": "In Finland API_v1.1_Internal.pdf, what is Comply : API Submission (Finland) 13 Submission Results The Submission Results tab on the Return Review screen?",
+    "reference_answer": "Comply : API Submission (Finland) 13 Submission Results The Submission Results tab on the Return Review screen is updated.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Finland API_v1.1_Internal.pdf"
+  },
+  {
+    "id": "finland_api_v1_1_internal_05",
+    "question": "In Finland API_v1.1_Internal.pdf, what is Purpose of this section The purpose of this document?",
+    "reference_answer": "Purpose of this section The purpose of this document is to provide guidance and instruction on how Comply users submit Returns for Finland using an API with the Finish Tax Authority.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Finland API_v1.1_Internal.pdf"
+  },
+  {
+    "id": "german_api_v1_0_client_01",
+    "question": "According to German API_v1.0_Client.pdf, what does it state about '• VAT Returns • VIES • Annual Returns • VAT'?",
+    "reference_answer": "• VAT Returns • VIES • Annual Returns • VAT Advanced Payments Comply: API Submission (Germany) 4 2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Client.pdf"
+  },
+  {
+    "id": "german_api_v1_0_client_02",
+    "question": "In German API_v1.0_Client.pdf, what is The return data?",
+    "reference_answer": "The return data is exchanged with ERiC via the API and goes through 2 Validation Steps: • Authentication Process • Data Validation Please note: These are both Tax Authority processes.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Client.pdf"
+  },
+  {
+    "id": "german_api_v1_0_client_03",
+    "question": "According to German API_v1.0_Client.pdf, what does it state about 'Comply: API Submission (Germany) 15 • Submit Manually This option'?",
+    "reference_answer": "Comply: API Submission (Germany) 15 • Submit Manually This option allows the user to skip the API transmission and submit the return manually.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Client.pdf"
+  },
+  {
+    "id": "german_api_v1_0_client_04",
+    "question": "According to German API_v1.0_Client.pdf, what does it state about 'Comply: API Submission (Germany) 17 Submission Files Tab Once a'?",
+    "reference_answer": "Comply: API Submission (Germany) 17 Submission Files Tab Once a return has been successfully submitted, a PDF confirmation of the filed return will be populated in the Response Files Tab.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Client.pdf"
+  },
+  {
+    "id": "german_api_v1_0_client_05",
+    "question": "According to German API_v1.0_Client.pdf, what does it state about 'Comply: API Submission (Germany) 22 Once complete, the user can'?",
+    "reference_answer": "Comply: API Submission (Germany) 22 Once complete, the user can then Re-Submit the return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Client.pdf"
+  },
+  {
+    "id": "german_api_v1_0_internal_01",
+    "question": "According to German API_v1.0_Internal.pdf, what does it state about '• VAT Returns • VIES • Annual Returns • VAT'?",
+    "reference_answer": "• VAT Returns • VIES • Annual Returns • VAT Advanced Payments Comply : API Submission (Germany) 4 2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Internal.pdf"
+  },
+  {
+    "id": "german_api_v1_0_internal_02",
+    "question": "In German API_v1.0_Internal.pdf, what is The return data?",
+    "reference_answer": "The return data is exchanged with ERiC via the API and goes through 2 Validation Steps: • Authentication Process • Data Validation Please note: These are both Tax Authority processes.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Internal.pdf"
+  },
+  {
+    "id": "german_api_v1_0_internal_03",
+    "question": "According to German API_v1.0_Internal.pdf, what does it state about 'Comply : API Submission (Germany) 16 • Submit Manually This'?",
+    "reference_answer": "Comply : API Submission (Germany) 16 • Submit Manually This option allows the user to skip the API transmission and submit the return manually.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Internal.pdf"
+  },
+  {
+    "id": "german_api_v1_0_internal_04",
+    "question": "According to German API_v1.0_Internal.pdf, what does it state about 'Comply : API Submission (Germany) 18 Submission Files Tab Once'?",
+    "reference_answer": "Comply : API Submission (Germany) 18 Submission Files Tab Once a return has been successfully submitted, a PDF confirmation of the filed return will be populated in the Response Files Tab.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Internal.pdf"
+  },
+  {
+    "id": "german_api_v1_0_internal_05",
+    "question": "According to German API_v1.0_Internal.pdf, what does it state about 'Comply : API Submission (Germany) 23 Once complete, the user'?",
+    "reference_answer": "Comply : API Submission (Germany) 23 Once complete, the user can then Re-Submit the return.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "German API_v1.0_Internal.pdf"
+  },
+  {
+    "id": "how_to_onboard_a_client_v2_0_latest_01",
+    "question": "According to How to Onboard a Client_v2.0_Latest.pdf, what does it state about 'TBI Learning & Development: How to Onboard a Client 15'?",
+    "reference_answer": "TBI Learning & Development: How to Onboard a Client 15 User Roles Here the administrator can assign/edit roles to each task in the VAT Return process.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "How to Onboard a Client_v2.0_Latest.pdf"
+  },
+  {
+    "id": "how_to_onboard_a_client_v2_0_latest_02",
+    "question": "In How to Onboard a Client_v2.0_Latest.pdf, what is Set up User Roles The user?",
+    "reference_answer": "Set up User Roles The user is now required to assign roles to each task in the VAT Return process.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "How to Onboard a Client_v2.0_Latest.pdf"
+  },
+  {
+    "id": "how_to_onboard_a_client_v2_0_latest_03",
+    "question": "In How to Onboard a Client_v2.0_Latest.pdf, what are This will include: • Personal Details • Report Role – these?",
+    "reference_answer": "This will include: • Personal Details • Report Role – these are the specific VAT return roles the user has been assigned to for any entities they are responsible for.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "How to Onboard a Client_v2.0_Latest.pdf"
+  },
+  {
+    "id": "how_to_onboard_a_client_v2_0_latest_04",
+    "question": "In How to Onboard a Client_v2.0_Latest.pdf, what is TBI Learning & Development: How to Onboard a Client 10 Below as a sample of an email reminder: If the user?",
+    "reference_answer": "TBI Learning & Development: How to Onboard a Client 10 Below as a sample of an email reminder: If the user is responsible for multiple roles and multiple returns, they may be combined and grouped appropriately.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "How to Onboard a Client_v2.0_Latest.pdf"
+  },
+  {
+    "id": "how_to_onboard_a_client_v2_0_latest_05",
+    "question": "In How to Onboard a Client_v2.0_Latest.pdf, what are Standard User Notifications This preconfigured process allows the user to receive system reminders via email for tasks that?",
+    "reference_answer": "Standard User Notifications This preconfigured process allows the user to receive system reminders via email for tasks that are assigned to them.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "How to Onboard a Client_v2.0_Latest.pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_1_01",
+    "question": "In Release Guide 3.4.0 (1).pdf, what is Drop-down options for Non-Numerical Box 870 When a user?",
+    "reference_answer": "Drop-down options for Non-Numerical Box 870 When a user is preparing an Annual VAT Return for Germany for 2022/2023, and the Non- Numerical Box 870 is displayed.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (1).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_1_02",
+    "question": "In Release Guide 3.4.0 (1).pdf, what are The main areas of focus for this release?",
+    "reference_answer": "The main areas of focus for this release are as follows: • Germany API • Deviations and Previous Periods • Annual Returns Comply: Release Guide 3 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (1).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_1_03",
+    "question": "According to Release Guide 3.4.0 (1).pdf, what does it state about 'Audit History Once the user clicks Submit on a Return'?",
+    "reference_answer": "Audit History Once the user clicks Submit on a Return, Comply keeps an Audit History of each step in the process.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (1).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_1_04",
+    "question": "In Release Guide 3.4.0 (1).pdf, what is Annual VAT Returns (Germany) Processing of Annual VAT Returns?",
+    "reference_answer": "Annual VAT Returns (Germany) Processing of Annual VAT Returns is not available in Comply.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (1).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_1_05",
+    "question": "In Release Guide 3.4.0 (1).pdf, what are Return Boxes Once the data file has been uploaded and processed, the return boxes?",
+    "reference_answer": "Return Boxes Once the data file has been uploaded and processed, the return boxes are generated and available in the Return Review screen.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (1).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_2_01",
+    "question": "In Release Guide 3.4.0 (2).pdf, what is Drop-down options for Non-Numerical Box 870 When a user?",
+    "reference_answer": "Drop-down options for Non-Numerical Box 870 When a user is preparing an Annual VAT Return for Germany for 2022/2023, and the Non- Numerical Box 870 is displayed.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (2).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_2_02",
+    "question": "In Release Guide 3.4.0 (2).pdf, what are The main areas of focus for this release?",
+    "reference_answer": "The main areas of focus for this release are as follows: • Germany API • Deviations and Previous Periods • Annual Returns Comply: Release Guide 3 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (2).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_2_03",
+    "question": "According to Release Guide 3.4.0 (2).pdf, what does it state about 'Audit History Once the user clicks Submit on a Return'?",
+    "reference_answer": "Audit History Once the user clicks Submit on a Return, Comply keeps an Audit History of each step in the process.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (2).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_2_04",
+    "question": "In Release Guide 3.4.0 (2).pdf, what is Annual VAT Returns (Germany) Processing of Annual VAT Returns?",
+    "reference_answer": "Annual VAT Returns (Germany) Processing of Annual VAT Returns is not available in Comply.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (2).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_2_05",
+    "question": "In Release Guide 3.4.0 (2).pdf, what are Return Boxes Once the data file has been uploaded and processed, the return boxes?",
+    "reference_answer": "Return Boxes Once the data file has been uploaded and processed, the return boxes are generated and available in the Return Review screen.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0 (2).pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_01",
+    "question": "In Release Guide 3.4.0.pdf, what is Drop-down options for Non-Numerical Box 870 When a user?",
+    "reference_answer": "Drop-down options for Non-Numerical Box 870 When a user is preparing an Annual VAT Return for Germany for 2022/2023, and the Non- Numerical Box 870 is displayed.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0.pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_02",
+    "question": "In Release Guide 3.4.0.pdf, what are The main areas of focus for this release?",
+    "reference_answer": "The main areas of focus for this release are as follows: • Germany API • Deviations and Previous Periods • Annual Returns Comply: Release Guide 3 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0.pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_03",
+    "question": "According to Release Guide 3.4.0.pdf, what does it state about 'Audit History Once the user clicks Submit on a Return'?",
+    "reference_answer": "Audit History Once the user clicks Submit on a Return, Comply keeps an Audit History of each step in the process.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0.pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_04",
+    "question": "In Release Guide 3.4.0.pdf, what is Annual VAT Returns (Germany) Processing of Annual VAT Returns?",
+    "reference_answer": "Annual VAT Returns (Germany) Processing of Annual VAT Returns is not available in Comply.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0.pdf"
+  },
+  {
+    "id": "release_guide_3_4_0_05",
+    "question": "In Release Guide 3.4.0.pdf, what are Return Boxes Once the data file has been uploaded and processed, the return boxes?",
+    "reference_answer": "Return Boxes Once the data file has been uploaded and processed, the return boxes are generated and available in the Return Review screen.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.4.0.pdf"
+  },
+  {
+    "id": "release_guide_3_5_0_01",
+    "question": "In Release Guide 3.5.0.pdf, what is This process applies to the following Return Types: • VAT Returns • Annual VAT Returns Please Note: VAT – Amendments are not included in this process as a Manual Form?",
+    "reference_answer": "This process applies to the following Return Types: • VAT Returns • Annual VAT Returns Please Note: VAT – Amendments are not included in this process as a Manual Form is required by HMRC.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.5.0.pdf"
+  },
+  {
+    "id": "release_guide_3_5_0_02",
+    "question": "In Release Guide 3.5.0.pdf, what are Successful Submission Flow Providing the submitted file passes HMRC validation, the following 4 actions?",
+    "reference_answer": "Successful Submission Flow Providing the submitted file passes HMRC validation, the following 4 actions are triggered in Comply: Submitted Pop Up A pop-up notification confirms that the return has been submitted.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.5.0.pdf"
+  },
+  {
+    "id": "release_guide_3_5_0_03",
+    "question": "According to Release Guide 3.5.0.pdf, what does it state about 'Comply: Release Guide 13 Once the user makes the necessary'?",
+    "reference_answer": "Comply: Release Guide 13 Once the user makes the necessary changes, they use the workflow to progress the return through Review, Approve and Submit.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.5.0.pdf"
+  },
+  {
+    "id": "release_guide_3_5_0_04",
+    "question": "According to Release Guide 3.5.0.pdf, what does it state about 'Comply: Release Guide 16 The Status of the Return changes'?",
+    "reference_answer": "Comply: Release Guide 16 The Status of the Return changes to Submitted to TA for Processing.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.5.0.pdf"
+  },
+  {
+    "id": "release_guide_3_5_0_05",
+    "question": "According to Release Guide 3.5.0.pdf, what does it state about 'Once the user has reviewed the data validation errors, they'?",
+    "reference_answer": "Once the user has reviewed the data validation errors, they should: 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.5.0.pdf"
+  },
+  {
+    "id": "release_guide_3_6_0_01",
+    "question": "In Release Guide 3.6.0.pdf, what are Edit Numerical Boxes Users who?",
+    "reference_answer": "Edit Numerical Boxes Users who are preparing a VAT Return for Hungary can, where required, amend/edit the List Purchases box.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.6.0.pdf"
+  },
+  {
+    "id": "release_guide_3_6_0_02",
+    "question": "According to Release Guide 3.6.0.pdf, what does it state about 'Comply: Release Guide 4 Numerical Boxes Once the Data has'?",
+    "reference_answer": "Comply: Release Guide 4 Numerical Boxes Once the Data has been uploaded (via API or File Upload), the data goes through the relevant data validation and generates the relevant boxes.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.6.0.pdf"
+  },
+  {
+    "id": "release_guide_3_6_0_03",
+    "question": "In Release Guide 3.6.0.pdf, what are Navigate to: Return > Return Review > Numerical Boxes The new boxes?",
+    "reference_answer": "Navigate to: Return > Return Review > Numerical Boxes The new boxes are generated at the bottom of the Numerical Boxes list, so the user will be required to scroll to locate them.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.6.0.pdf"
+  },
+  {
+    "id": "release_guide_3_6_0_04",
+    "question": "In Release Guide 3.6.0.pdf, what is Notes: • If the “Date of Receipt”?",
+    "reference_answer": "Notes: • If the “Date of Receipt” is mapped in the Template for VAT Returns, and is included in the uploaded data file, then this will be displayed in the List Purchases Credit Notes box (as shown above).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.6.0.pdf"
+  },
+  {
+    "id": "release_guide_3_6_0_05",
+    "question": "In Release Guide 3.6.0.pdf, what are Annual VAT Return When viewing the numerical boxes on the Return Review screen, when values?",
+    "reference_answer": "Annual VAT Return When viewing the numerical boxes on the Return Review screen, when values are populated in Row 23, then these values are duplicated on Row 166.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.6.0.pdf"
+  },
+  {
+    "id": "release_guide_3_7_0_01",
+    "question": "According to Release Guide 3.7.0.pdf, what does it state about 'Filing Deadline The default filing deadlines for the following have'?",
+    "reference_answer": "Filing Deadline The default filing deadlines for the following have been amended: • VAT (Monthly, Quarterly, Annually) • VIES (Monthly, Quarterly) • Annual VAT Example: Quarterly VAT Return: Comply: Release Guide 19 9.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.7.0.pdf"
+  },
+  {
+    "id": "release_guide_3_7_0_02",
+    "question": "According to Release Guide 3.7.0.pdf, what does it state about 'New Standard VAT Rate All relevant screens have been amended'?",
+    "reference_answer": "New Standard VAT Rate All relevant screens have been amended to accommodate the new VAT Rate for 2024 returns: • Templates (Creating and Existing) • Data Validation Rules • Return Review (Numerical Boxes) 5.2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.7.0.pdf"
+  },
+  {
+    "id": "release_guide_3_7_0_03",
+    "question": "According to Release Guide 3.7.0.pdf, what does it state about 'Spain Additional Filing Deadlines have been added for VAT Returns'?",
+    "reference_answer": "Spain Additional Filing Deadlines have been added for VAT Returns: • Monthly VAT Returns – EOP + 25 • Quarterly VAT Returns – EOP + 15 On the Return Details screen in the Entity section, the drop-down now includes these additional deadline options.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.7.0.pdf"
+  },
+  {
+    "id": "release_guide_3_7_0_04",
+    "question": "In Release Guide 3.7.0.pdf, what are Annual VAT Return When preparing Annual VAT Returns from/after 01/012023, then the transactions?",
+    "reference_answer": "Annual VAT Return When preparing Annual VAT Returns from/after 01/012023, then the transactions are mapped and allocated to the boxes in the return Review screen.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.7.0.pdf"
+  },
+  {
+    "id": "release_guide_3_7_0_05",
+    "question": "In Release Guide 3.7.0.pdf, what are Output/Input Return Summary When preparing a VAT Return for 2024 onwards, and values?",
+    "reference_answer": "Output/Input Return Summary When preparing a VAT Return for 2024 onwards, and values are populated in the return boxes which are responsible for calculations then these calculations are available in the Return Summary Headers: • Output VAT • Input VAT • Net Tax Position • Tax Payable • Tax Refundable • Balance Carried Forward 4.3.1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.7.0.pdf"
+  },
+  {
+    "id": "release_guide_3_8_0_01",
+    "question": "In Release Guide 3.8.0.pdf, what is Box VP12 – Calculation Applies to when the user?",
+    "reference_answer": "Box VP12 – Calculation Applies to when the user is preparing a Quarterly VAT Return (and there are no monthly advanced payments for that period).",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.0.pdf"
+  },
+  {
+    "id": "release_guide_3_8_0_02",
+    "question": "According to Release Guide 3.8.0.pdf, what does it state about 'Monthly PL_VAT_Return_Monthly.xml Quarterly PL_VAT_Return_Quarterly.xml Comply: Release Guide 19 8.1.2'?",
+    "reference_answer": "Monthly PL_VAT_Return_Monthly.xml Quarterly PL_VAT_Return_Quarterly.xml Comply: Release Guide 19 8.1.2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.0.pdf"
+  },
+  {
+    "id": "release_guide_3_8_0_03",
+    "question": "According to Release Guide 3.8.0.pdf, what does it state about 'Extended Deadline for VAT Return'?",
+    "reference_answer": "Extended Deadline for VAT Return ........................................................................................",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.0.pdf"
+  },
+  {
+    "id": "release_guide_3_8_0_04",
+    "question": "According to Release Guide 3.8.0.pdf, what does it state about 'Nature of Transaction Codes (Intrastat) Impacts the user when preparing'?",
+    "reference_answer": "Nature of Transaction Codes (Intrastat) Impacts the user when preparing Intrastat Returns (Arrivals/Dispatches) and uploading transactions.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.0.pdf"
+  },
+  {
+    "id": "release_guide_3_8_0_05",
+    "question": "According to Release Guide 3.8.0.pdf, what does it state about 'Extended Deadline for VAT Return The following Extended Deadline for'?",
+    "reference_answer": "Extended Deadline for VAT Return The following Extended Deadline for VAT Returns has been added.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.0.pdf"
+  },
+  {
+    "id": "release_guide_3_8_2_01",
+    "question": "According to Release Guide 3.8.2.pdf, what does it state about 'This includes: • End Dating List Columns in Return Boxes'?",
+    "reference_answer": "This includes: • End Dating List Columns in Return Boxes for 2023 • Creating new List Columns for 2024 Return Boxes • 12% VAT Rate considerations Comply: Release Guide 3 2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.2.pdf"
+  },
+  {
+    "id": "release_guide_3_8_2_02",
+    "question": "In Release Guide 3.8.2.pdf, what are End Date List Columns for 2023 When the user navigates to a Control List for a return in 2023, then the following boxes?",
+    "reference_answer": "End Date List Columns for 2023 When the user navigates to a Control List for a return in 2023, then the following boxes are available in the boxes: • A2 • A4 • A5 • B1 • B2 • B3 Example: The list columns as they related to VAT Rate will be end dated and new ones for 2024 will be created.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.2.pdf"
+  },
+  {
+    "id": "release_guide_3_8_2_03",
+    "question": "According to Release Guide 3.8.2.pdf, what does it state about '12% Reduced VAT Rate to be considered in Calculations for'?",
+    "reference_answer": "12% Reduced VAT Rate to be considered in Calculations for Numerical Boxes When users provide transactions with either 12% or 15% Reduced VAT Rate, these will be considered in the calculations.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.2.pdf"
+  },
+  {
+    "id": "release_guide_3_8_2_04",
+    "question": "According to Release Guide 3.8.2.pdf, what does it state about 'Create New List Columns for 2024 When the user navigates'?",
+    "reference_answer": "Create New List Columns for 2024 When the user navigates to a Control List for a return in 2024, then the following boxes have been created with new List Columns.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.2.pdf"
+  },
+  {
+    "id": "release_guide_3_8_2_05",
+    "question": "According to Release Guide 3.8.2.pdf, what does it state about 'When the user navigates to the numerical boxes: A2, A4'?",
+    "reference_answer": "When the user navigates to the numerical boxes: A2, A4, A5 , B1, B2, B3 The values for the following List Columns will be displayed in the relevant numerical boxes.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.8.2.pdf"
+  },
+  {
+    "id": "release_guide_3_9_0_01",
+    "question": "In Release Guide 3.9.0.pdf, what are Rounding for Values in Numerical Boxes When preparing a VAT Return and the user navigates to the Return Review screen, then the values presented in the Numerical Boxes?",
+    "reference_answer": "Rounding for Values in Numerical Boxes When preparing a VAT Return and the user navigates to the Return Review screen, then the values presented in the Numerical Boxes are rounded to 2 decimal places.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.0.pdf"
+  },
+  {
+    "id": "release_guide_3_9_0_02",
+    "question": "In Release Guide 3.9.0.pdf, what is Box 04 – Removal of Column VAT Nr of Acquirer When preparing a VIES return from 31/12/2021, and the user navigates to Box 04 on the return review screen, then the following Column?",
+    "reference_answer": "Box 04 – Removal of Column VAT Nr of Acquirer When preparing a VIES return from 31/12/2021, and the user navigates to Box 04 on the return review screen, then the following Column is NOT displayed.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.0.pdf"
+  },
+  {
+    "id": "release_guide_3_9_0_03",
+    "question": "According to Release Guide 3.9.0.pdf, what does it state about 'o Corrections to VAT returns in Comply (Ireland, Portugal) •'?",
+    "reference_answer": "o Corrections to VAT returns in Comply (Ireland, Portugal) • System Specific o Transaction Tab o Return Review o Data Validation Comply: Release Guide 5 2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.0.pdf"
+  },
+  {
+    "id": "release_guide_3_9_0_04",
+    "question": "In Release Guide 3.9.0.pdf, what is Data Validation When the user?",
+    "reference_answer": "Data Validation When the user is on the Data Validation Tab of a VAT Return, then the following rules WILL NOT flag errors for these new VAT Rates: • C1.14 – Valid Input VAT Rate within Range • C2.14– Valid Output VAT Rate within Range Comply: Release Guide 9 6.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.0.pdf"
+  },
+  {
+    "id": "release_guide_3_9_0_05",
+    "question": "In Release Guide 3.9.0.pdf, what is Numerical Boxes When the user navigates to the Numerical Boxes tab of the Return Review screen, the Numerical boxes are displayed as follows: Order: Box 5.11: Box 5.11?",
+    "reference_answer": "Numerical Boxes When the user navigates to the Numerical Boxes tab of the Return Review screen, the Numerical boxes are displayed as follows: Order: Box 5.11: Box 5.11 is editable.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.0.pdf"
+  },
+  {
+    "id": "release_guide_3_9_1_01",
+    "question": "In Release Guide 3.9.1.pdf, what is Validation Rule K2.04 When the user?",
+    "reference_answer": "Validation Rule K2.04 When the user is preparing a Detailed Intrastat Dispatches Return, and the uploaded data does not match with the eligible Country of Origin list, then the rule fails.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.1.pdf"
+  },
+  {
+    "id": "release_guide_3_9_1_02",
+    "question": "In Release Guide 3.9.1.pdf, what is NULL Rule I2.04 When the user?",
+    "reference_answer": "NULL Rule I2.04 When the user is preparing a Detailed Intrastat Dispatches Return, and the Country-of-Origin field is blank in the uploaded data, then the rule fails.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.1.pdf"
+  },
+  {
+    "id": "release_guide_3_9_1_03",
+    "question": "According to Release Guide 3.9.1.pdf, what does it state about 'This includes updates to: • VAT (2024) • Intrastat •'?",
+    "reference_answer": "This includes updates to: • VAT (2024) • Intrastat • UI Change o Excluded Transactions Comply: Release Guide 3 2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.1.pdf"
+  },
+  {
+    "id": "release_guide_3_9_1_04",
+    "question": "In Release Guide 3.9.1.pdf, what are Ordering of Columns in List boxes for Arrivals/Dispatches When preparing an Intrastat Arrivals/Dispatches Return, the Columns in the list boxes?",
+    "reference_answer": "Ordering of Columns in List boxes for Arrivals/Dispatches When preparing an Intrastat Arrivals/Dispatches Return, the Columns in the list boxes are ordered as below: 3.5.1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.1.pdf"
+  },
+  {
+    "id": "release_guide_3_9_1_05",
+    "question": "In Release Guide 3.9.1.pdf, what are Numerical Boxes Y6/29/AB When preparing VAT Returns from 2024 onwards, these Numerical Boxes?",
+    "reference_answer": "Numerical Boxes Y6/29/AB When preparing VAT Returns from 2024 onwards, these Numerical Boxes are not Automatically Calculated.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.1.pdf"
+  },
+  {
+    "id": "release_guide_3_9_3_01",
+    "question": "In Release Guide 3.9.3.pdf, what is New Non-Numerical Box When preparing VAT/VIES returns for Finland and the user navigates to the Return Review screen, then the following new Delegate ID Non-Numerical Box?",
+    "reference_answer": "New Non-Numerical Box When preparing VAT/VIES returns for Finland and the user navigates to the Return Review screen, then the following new Delegate ID Non-Numerical Box is included and available: 2.1.1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.3.pdf"
+  },
+  {
+    "id": "release_guide_3_9_3_02",
+    "question": "According to Release Guide 3.9.3.pdf, what does it state about 'Italy The following updates have been made to support the'?",
+    "reference_answer": "Italy The following updates have been made to support the processing of VAT Returns for 2024.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.3.pdf"
+  },
+  {
+    "id": "release_guide_3_9_3_03",
+    "question": "In Release Guide 3.9.3.pdf, what is Return Summary Calculations have been updated for 2024, so that when the user?",
+    "reference_answer": "Return Summary Calculations have been updated for 2024, so that when the user is preparing a VAT return the Return Summary Headers display the correct values for: • Output • Input • NET Tax Position • Tax Payable • Tax Refundable • Balance Brought Forward 3.5.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.3.pdf"
+  },
+  {
+    "id": "release_guide_3_9_3_04",
+    "question": "In Release Guide 3.9.3.pdf, what are Mapping Update (VAT Return) The current mapping has been updated and when the user uploads or adds transactions to a VAT Return, they?",
+    "reference_answer": "Mapping Update (VAT Return) The current mapping has been updated and when the user uploads or adds transactions to a VAT Return, they are allocated to the correct Boxes.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.3.pdf"
+  },
+  {
+    "id": "release_guide_3_9_3_05",
+    "question": "In Release Guide 3.9.3.pdf, what are Mapping The current mapping has been updated and when the user uploads or adds transactions to a VAT Return, they?",
+    "reference_answer": "Mapping The current mapping has been updated and when the user uploads or adds transactions to a VAT Return, they are allocated to the correct Boxes.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.3.pdf"
+  },
+  {
+    "id": "release_guide_3_9_5_01",
+    "question": "In Release Guide 3.9.5.pdf, what are VAT Boxes When the user navigates to the Return Review screen, Numerical Boxes for 2023 have been end- dated and?",
+    "reference_answer": "VAT Boxes When the user navigates to the Return Review screen, Numerical Boxes for 2023 have been end- dated and are no longer available.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.5.pdf"
+  },
+  {
+    "id": "release_guide_3_9_5_02",
+    "question": "According to Release Guide 3.9.5.pdf, what does it state about 'New Zealand This section consists of updates made to support'?",
+    "reference_answer": "New Zealand This section consists of updates made to support VAT filing for 2024, including: • Mapping • VAT Boxes • Return Summary Calculations 2.1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.5.pdf"
+  },
+  {
+    "id": "release_guide_3_9_5_03",
+    "question": "In Release Guide 3.9.5.pdf, what is Return Summary Scripts Calculations have been updated for 2024, so that when the user?",
+    "reference_answer": "Return Summary Scripts Calculations have been updated for 2024, so that when the user is preparing a VAT return the Return Summary Headers display the correct values for: • Output • Input • NET Tax Position • Tax Payable • Tax Refundable • Balance Brought Forward",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.5.pdf"
+  },
+  {
+    "id": "release_guide_3_9_5_04",
+    "question": "In Release Guide 3.9.5.pdf, what are Mapping Update (VAT Return) The current mapping has been updated and when the user uploads or adds transactions to a VAT Return, they?",
+    "reference_answer": "Mapping Update (VAT Return) The current mapping has been updated and when the user uploads or adds transactions to a VAT Return, they are allocated to the correct Boxes.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.5.pdf"
+  },
+  {
+    "id": "release_guide_3_9_5_05",
+    "question": "In Release Guide 3.9.5.pdf, what is Box 35 When preparing a return and the user navigates to the Return Review section, then Box 35?",
+    "reference_answer": "Box 35 When preparing a return and the user navigates to the Return Review section, then Box 35 is not auto calculated and is editable to allow manual adjustments.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide 3.9.5.pdf"
+  },
+  {
+    "id": "release_guide_v3_2_0_01",
+    "question": "In Release Guide v3.2.0.pdf, what is Model for Return Listing APIs Description: Comply users should be notified that there?",
+    "reference_answer": "Model for Return Listing APIs Description: Comply users should be notified that there is now a model for all APIs related to the Returns Page.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide v3.2.0.pdf"
+  },
+  {
+    "id": "release_guide_v3_2_0_02",
+    "question": "In Release Guide v3.2.0.pdf, what is Drop Down in List Purchases VAT Return – Estonia Description: As a Comply User (Preparer/Reviewer), there?",
+    "reference_answer": "Drop Down in List Purchases VAT Return – Estonia Description: As a Comply User (Preparer/Reviewer), there is now a three option drop down menu in the Special Code in List Purchases numerical return box.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide v3.2.0.pdf"
+  },
+  {
+    "id": "release_guide_v3_2_0_03",
+    "question": "According to Release Guide v3.2.0.pdf, what does it state about 'Apply All Function in List Sales & List Purchases –'?",
+    "reference_answer": "Apply All Function in List Sales & List Purchases – Estonia VAT Return Description: As a Comply user (Preparer/Reviewer), users can find an Apply All function in the return list boxes List Sales and List Purchases.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide v3.2.0.pdf"
+  },
+  {
+    "id": "release_guide_v3_2_0_04",
+    "question": "In Release Guide v3.2.0.pdf, what are Delivery Terms Defined by Jurisdiction – Intrastat Returns Description: As a Comply user, delivery terms?",
+    "reference_answer": "Delivery Terms Defined by Jurisdiction – Intrastat Returns Description: As a Comply user, delivery terms are defined by Country ID.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide v3.2.0.pdf"
+  },
+  {
+    "id": "release_guide_v3_2_0_05",
+    "question": "In Release Guide v3.2.0.pdf, what are Numerical Boxes for Control List (Czech Rep.) Description: As a Comply User (all roles), numerical return boxes?",
+    "reference_answer": "Numerical Boxes for Control List (Czech Rep.) Description: As a Comply User (all roles), numerical return boxes are available in the Return Review for the Control List in Czech Republic.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide v3.2.0.pdf"
+  },
+  {
+    "id": "release_guide_v3_3_0_01",
+    "question": "In Release Guide V3.3.0.pdf, what are The main areas of focus for this release?",
+    "reference_answer": "The main areas of focus for this release are as follows: • Annual Returns • VAT Advanced Payments • Country Specific – Return Updates • VIES – Country Specific Changes Comply: Release Guide 4 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide V3.3.0.pdf"
+  },
+  {
+    "id": "release_guide_v3_3_0_02",
+    "question": "In Release Guide V3.3.0.pdf, what is Numerical Boxes Available Description: When a user?",
+    "reference_answer": "Numerical Boxes Available Description: When a user is preparing a VAT Advanced return for Germany, and navigates to the Return Review tab, the following 2 Numerical Boxes are displayed: • Row_7: is Editable using the Pencil Icon.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide V3.3.0.pdf"
+  },
+  {
+    "id": "release_guide_v3_3_0_03",
+    "question": "In Release Guide V3.3.0.pdf, what is Non-Numerical Boxes Available Description: When a user?",
+    "reference_answer": "Non-Numerical Boxes Available Description: When a user is preparing a VAT Advanced Payment Return, then the relevant Non-Numerical boxes are available in both the Return Review tab and also the Entity section.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide V3.3.0.pdf"
+  },
+  {
+    "id": "release_guide_v3_3_0_04",
+    "question": "In Release Guide V3.3.0.pdf, what is Return Header for VAT Advanced Payment Description: When a user?",
+    "reference_answer": "Return Header for VAT Advanced Payment Description: When a user is preparing a VAT Advanced Payment return, when they click to expand the Return Header Details, only the following 3 are now displayed: • Submission Type • Version • Is Part of VAT Group Comply: Release Guide 7 1.4.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide V3.3.0.pdf"
+  },
+  {
+    "id": "release_guide_v3_3_0_05",
+    "question": "In Release Guide V3.3.0.pdf, what is Numerical Boxes for Annual VAT Return (Germany) Description: When a user?",
+    "reference_answer": "Numerical Boxes for Annual VAT Return (Germany) Description: When a user is preparing an Annual VAT Return for Germany, then the Numerical Boxes will be available on the Return Review Tab.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide V3.3.0.pdf"
+  },
+  {
+    "id": "release_guide_3_0_0_01",
+    "question": "In Release Guide_3.0.0.pdf, what is Deletion of Data Files – VAT Group (VCCMVP-5350) Description: As a Comply user, when a Data File for an Individual or VAT Calculation Return?",
+    "reference_answer": "Deletion of Data Files – VAT Group (VCCMVP-5350) Description: As a Comply user, when a Data File for an Individual or VAT Calculation Return is deleted from a Consolidated Return the system removes these transactions.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide_3.0.0.pdf"
+  },
+  {
+    "id": "release_guide_3_0_0_02",
+    "question": "According to Release Guide_3.0.0.pdf, what does it state about 'Members Leaving (VCCMVP-4062) Description: As a Comply Admin user and'?",
+    "reference_answer": "Members Leaving (VCCMVP-4062) Description: As a Comply Admin user and member of a VAT Group, if you leave a VAT Group all future unsubmitted VAT Group Returns will become returns of a standalone entity.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide_3.0.0.pdf"
+  },
+  {
+    "id": "release_guide_3_0_0_03",
+    "question": "In Release Guide_3.0.0.pdf, what are Country Settings for Annual VAT Return – VAT Group (VCCMVP- 7067) Description: As a Comply User, the VAT Group Submission Type for the Annual VAT Returns?",
+    "reference_answer": "Country Settings for Annual VAT Return – VAT Group (VCCMVP- 7067) Description: As a Comply User, the VAT Group Submission Type for the Annual VAT Returns are seeded within Comply.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide_3.0.0.pdf"
+  },
+  {
+    "id": "release_guide_3_0_0_04",
+    "question": "In Release Guide_3.0.0.pdf, what is Submission Type Consolidated – VAT Group (VCCMVP-9466) Description: As a Comply user, there?",
+    "reference_answer": "Submission Type Consolidated – VAT Group (VCCMVP-9466) Description: As a Comply user, there is an Audit Log in the Consolidated Return showing transactions associated from the VAT Calculations.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide_3.0.0.pdf"
+  },
+  {
+    "id": "release_guide_3_0_0_05",
+    "question": "According to Release Guide_3.0.0.pdf, what does it state about 'Deregistration – Entity/Member of VAT Group (VCCMVP-5115) Description: As an'?",
+    "reference_answer": "Deregistration – Entity/Member of VAT Group (VCCMVP-5115) Description: As an Admin Staff/Client User, when a user deregisters an entity from a VAT Group then the VAT Group Details>Part of a VAT Group?",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "Release Guide_3.0.0.pdf"
+  },
+  {
+    "id": "vat_deregistration_01",
+    "question": "According to VAT DeRegistration.pdf, what does it state about 'Any Returns with a status other than “Data Due” (for'?",
+    "reference_answer": "Any Returns with a status other than “Data Due” (for the current period) should still be processed and submitted.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "VAT DeRegistration.pdf"
+  },
+  {
+    "id": "vat_deregistration_02",
+    "question": "In VAT DeRegistration.pdf, what is TBI Learning & Development: VAT De-Registration 8 This?",
+    "reference_answer": "TBI Learning & Development: VAT De-Registration 8 This is non editable field.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "VAT DeRegistration.pdf"
+  },
+  {
+    "id": "vat_deregistration_03",
+    "question": "According to VAT DeRegistration.pdf, what does it state about 'VAT De-Registration TBI Learning & Development: VAT De-Registration 1 Version'?",
+    "reference_answer": "VAT De-Registration TBI Learning & Development: VAT De-Registration 1 Version Control Version Date Author Details 1.0 19th Dec 2022 Keith O’Sullivan Published TBI Learning & Development: VAT De-Registration 2 Table of Contents 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "VAT DeRegistration.pdf"
+  },
+  {
+    "id": "vat_deregistration_04",
+    "question": "According to VAT DeRegistration.pdf, what does it state about '7 TBI Learning & Development: VAT De-Registration 3 1'?",
+    "reference_answer": "7 TBI Learning & Development: VAT De-Registration 3 1.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "VAT DeRegistration.pdf"
+  },
+  {
+    "id": "vat_deregistration_05",
+    "question": "According to VAT DeRegistration.pdf, what does it state about 'TBI Learning & Development: VAT De-Registration 4 2'?",
+    "reference_answer": "TBI Learning & Development: VAT De-Registration 4 2.",
+    "doc_scope": null,
+    "expected_chunk_ids": [],
+    "expect_no_answer": false,
+    "source_doc": "VAT DeRegistration.pdf"
   }
 ]

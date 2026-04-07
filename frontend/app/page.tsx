@@ -10,6 +10,7 @@ import { useDocuments } from "../hooks/useDocuments";
 import { useStream } from "../hooks/useStream";
 import { useChatStore } from "../store/chatStore";
 import { fetchSessions, fetchSessionMessages, syncKnowledgeBase } from "../lib/api";
+import { CitationDetail } from "../lib/types";
 
 const USER_ID = "local-user";
 
@@ -17,6 +18,7 @@ export default function HomePage() {
   const [citation, setCitation] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isSyncingKnowledgeBase, setIsSyncingKnowledgeBase] = useState(false);
+  const [citationDetails, setCitationDetails] = useState<Record<string, CitationDetail>>({});
 
   const sessions = useChatStore((s) => s.sessions);
   const activeSessionId = useChatStore((s) => s.activeSessionId);
@@ -56,6 +58,16 @@ export default function HomePage() {
     if (!activeSessionId) return [];
     return messages[activeSessionId] || [];
   }, [activeSessionId, messages]);
+
+  useEffect(() => {
+    const byChunk: Record<string, CitationDetail> = {};
+    for (const msg of activeMessages) {
+      for (const detail of msg.citation_details || []) {
+        byChunk[detail.chunk_id] = detail;
+      }
+    }
+    setCitationDetails(byChunk);
+  }, [activeMessages]);
 
   const onSend = async (query: string) => {
     setError(null);
@@ -135,10 +147,17 @@ export default function HomePage() {
                     role={m.role}
                     content={m.content}
                     citations={m.cited_chunks}
+                    citationDetails={
+                      m.citation_details ||
+                      m.cited_chunks
+                        .map((cid) => citationDetails[cid])
+                        .filter((d): d is CitationDetail => Boolean(d))
+                    }
+                    modelUsed={m.model_used}
                     onCitationClick={(c) => setCitation(c)}
                   />
                 ))}
-                <StreamingMessage content={streamingContent} />
+                <StreamingMessage content={streamingContent} isWaiting={isStreaming} />
               </>
             )}
           </div>
@@ -153,7 +172,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CitationModal open={!!citation} citation={citation} onClose={() => setCitation(null)} />
+      <CitationModal
+        open={!!citation}
+        citation={citation}
+        details={citation ? (citationDetails[citation] || null) : null}
+        onClose={() => setCitation(null)}
+      />
     </main>
   );
 }

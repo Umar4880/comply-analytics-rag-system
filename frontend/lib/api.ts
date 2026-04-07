@@ -1,4 +1,4 @@
-import { DocumentItem, Message, Session } from "./types";
+import { CitationDetail, DocumentItem, Message, Session } from "./types";
 
 function getApiUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_API_URL;
@@ -75,4 +75,12 @@ export function chatStream(request: {
     body: JSON.stringify(request),
     cache: "no-store",
   });
+}
+
+export async function fetchCitationDetails(ids: string[]): Promise<CitationDetail[]> {
+  if (!ids.length) return [];
+  const query = encodeURIComponent(ids.join(","));
+  const res = await fetch(`${API_URL}/api/citations?ids=${query}`, { cache: "no-store" });
+  if (!res.ok) throw new Error("Failed to load citation details");
+  return res.json();
 }

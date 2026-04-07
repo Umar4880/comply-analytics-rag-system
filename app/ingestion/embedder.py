@@ -209,7 +209,7 @@ class EmbedDocument:
         Reads all supported files from app/data,
         stages parsed chunks to cache, and embeds with resume support.
         """
-        supported_suffixes = {".pdf"}
+        supported_suffixes = {".pdf", ".docx", ".txt"}
 
         if not self._data_dir.exists():
             raise FileNotFoundError(f"Data directory not found: {self._data_dir}")

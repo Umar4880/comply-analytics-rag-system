@@ -17,10 +17,10 @@ from qdrant_client import QdrantClient
 from qdrant_client.http.models import FieldCondition, Filter, MatchValue
 
 try:
-    from langchain_google_genai import ChatGoogleGenerativeAI
+    from langchain_ollama import ChatOllama
     from langchain_core.messages import HumanMessage, SystemMessage
 except Exception:  # pragma: no cover
-    ChatGoogleGenerativeAI = None
+    ChatOllama = None
     HumanMessage = None
     SystemMessage = None
 
@@ -82,12 +82,12 @@ def overlap_support_score(answer: str, evidence_text: str) -> float:
 
 
 class LLMJudge:
-    def __init__(self, model: str, api_key: str) -> None:
-        self.available = bool(ChatGoogleGenerativeAI and HumanMessage and SystemMessage and api_key)
+    def __init__(self, model: str = "llama3.2:latest", api_key: str = "") -> None:
+        self.available = bool(ChatOllama and HumanMessage and SystemMessage)
         if not self.available:
             self._llm = None
             return
-        self._llm = ChatGoogleGenerativeAI(model=model, google_api_key=api_key, temperature=0.0)
+        self._llm = ChatOllama(model="llama3.2:latest", temperature=0.0)
 
     def _invoke_json(self, system_prompt: str, user_prompt: str) -> dict[str, Any] | None:
         if not self._llm:
@@ -250,7 +250,7 @@ def load_benchmark(path: Path) -> list[dict[str, Any]]:
 def run_eval(args: argparse.Namespace) -> dict[str, Any]:
     benchmark = load_benchmark(Path(args.benchmark))
 
-    judge = LLMJudge(model=args.judge_model, api_key=os.getenv("GOOGLE_API_KEY", ""))
+    judge = LLMJudge(model=args.judge_model)
     use_llm_judge = bool(args.use_llm_judge and judge.available)
 
     qdrant = QdrantClient(url=args.qdrant_url)
@@ -469,11 +469,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--qdrant-collection", default=os.getenv("QDRANT_COLLECTION", "documents"), help="Qdrant collection")
     p.add_argument("--output-dir", default="app/tests/eval_reports", help="Output folder for reports")
     p.add_argument("--timeout-sec", type=int, default=120, help="Request timeout per test case")
-    p.add_argument("--use-llm-judge", action="store_true", help="Use Gemini as evaluation judge")
+    p.add_argument("--use-llm-judge", action="store_true", help="Use llama3.2: as evaluation judge")
     p.add_argument(
         "--judge-model",
-        default=os.getenv("GEMINI_MODEL", "gemini-1.5-flash"),
-        help="Gemini model for judging",
+        default="llama3.2:latest",
+        help="LLM model for judging (default: llama3.2:latest)",
     )
     p.add_argument(
         "--heuristic-support-threshold",

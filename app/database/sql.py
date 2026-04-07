@@ -35,7 +35,16 @@ class Database:
     def _init_db(self):
         with self._connect_db() as conn:
             conn.executescript("""
-
+                               
+                CREATE TABLE IF NOT EXISTS execution_metadata(
+                    session_id TEXT NOT NULL
+                    status  TEXT NOT NULL
+                    error_message TEXT NOT NULL
+                    attempt_count TEXT NOT NULL
+                    update_at TEXT NOT NULL
+                               
+                );
+                               
                 CREATE TABLE IF NOT EXISTS document_metadata (
                     doc_id       TEXT PRIMARY KEY,
                     doc_name     TEXT NOT NULL,
